@@ -16,27 +16,24 @@ namespace WeeklyReport.common
         }
 
         /// <summary>
-        /// 日付取得
+        /// 今日日付の取得
         /// </summary>
-        /// <returns></returns>
         
         public DateTime getSysDateNow()
         {
-            //現在の日付を取得する
+            //今日日付を取得する
             DateTime dtToday = DateTime.Today;
             return dtToday;
         }
 
         /// <summary>
-        /// 現在の日付から週報の日付を計算する
-        /// 週報は月曜始まり
+        /// 取得した日付から週報の日付を計算する（※週報は日曜はじまり）
         /// </summary>
         /// <returns></returns>
-        /// s
+
         public DayModel getWeekSelect()
         {
-            //1週間が日曜日から始まり、土曜日で終わる時
-            //今週の最初の日
+            //今日日付を数値化（0~6）し、日曜日付【0】からマイナスする
             DateTime dtSunday = getSysDateNow().AddDays(0 - (int)getSysDateNow().DayOfWeek);
 
             DateTime dtMonday = dtSunday.AddDays(1);
@@ -48,26 +45,18 @@ namespace WeeklyReport.common
 
             DayModel model = new DayModel();
 
-            model.setSunday(dtSunday);
-            model.setMonday(dtMonday);
-            model.setTuesday(dtTuesday);
-            model.setWednesday(dtWednesday);
-            model.setThursday(dtThursday);
-            model.setFriday(dtFriday);
-            model.setSaturday(dtSaturday);
-            
+            model.dtSunday = dtSunday.ToString();
+            model.dtMonday = dtMonday.ToString(); 
+            model.dtTuesday = dtTuesday.ToString(); 
+            model.dtWednesday = dtWednesday.ToString();
+            model.dtThursday = dtThursday.ToString();
+            model.dtFriday = dtFriday.ToString();
+            model.dtSaturday = dtSaturday.ToString();
+
             return model;
-
-
-
-
         }
 
-       
-
-
     }
-
 
 }
 

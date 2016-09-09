@@ -32,15 +32,14 @@ namespace WeeklyReport
             DayCal hiduke = new DayCal();
             //日付の計算してdayに代入！
             DayModel day =  hiduke.getWeekSelect();
-
-
-            DateTime sunday = day.getSunday();
-            DateTime monday = day.getMonday();
-            DateTime tuesday = day.getTuesday();
-            DateTime wednesday = day.getWednesday();
-            DateTime thursday = day.getThursday();
-            DateTime friday = day.getFriday();
-            DateTime saturday = day.getSaturday();
+            
+            DateTime sunday = DateTime.Parse(day.dtSunday);
+            DateTime monday = DateTime.Parse(day.dtMonday);
+            DateTime tuesday = DateTime.Parse(day.dtTuesday);
+            DateTime wednesday = DateTime.Parse(day.dtWednesday);
+            DateTime thursday = DateTime.Parse(day.dtThursday);
+            DateTime friday = DateTime.Parse(day.dtFriday);
+            DateTime saturday = DateTime.Parse(day.dtSaturday);
 
             //ラベルに代入していく！
             SundayLabel.Text = sunday.ToString().Substring(0,10) + "　（日）";
