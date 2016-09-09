@@ -34,22 +34,22 @@ namespace WeeklyReport
             DayModel day =  hiduke.getWeekSelect();
 
 
-            DateTime sunday = day.getSunday();
-            DateTime monday = day.getMonday();
-            DateTime tuesday = day.getTuesday();
-            DateTime wednesday = day.getWednesday();
-            DateTime thursday = day.getThursday();
-            DateTime friday = day.getFriday();
-            DateTime saturday = day.getSaturday();
+            DateTime sunday     = DateTime.Parse(day.dtSunday);
+            DateTime monday     = DateTime.Parse(day.dtMonday);
+            DateTime tuesday    = DateTime.Parse(day.dtTuesday);
+            DateTime wednesday  = DateTime.Parse(day.dtWednesday);
+            DateTime thursday   = DateTime.Parse(day.dtThursday);
+            DateTime friday     = DateTime.Parse(day.dtFriday);
+            DateTime saturday   = DateTime.Parse(day.dtSaturday);
 
             //ラベルに代入していく！
-            SundayLabel.Text = sunday.ToString().Substring(0,10) + "　（日）";
-            MondayLabel.Text = monday.ToString().Substring(0, 10) + "　（月）";
-            TuesdayLabel.Text = tuesday.ToString().Substring(0, 10) + "　（火）";
+            SundayLabel.Text    = sunday.ToString().Substring(0,10) + "　（日）";
+            MondayLabel.Text    = monday.ToString().Substring(0, 10) + "　（月）";
+            TuesdayLabel.Text   = tuesday.ToString().Substring(0, 10) + "　（火）";
             WednesdayLabel.Text = wednesday.ToString().Substring(0, 10) + "　（水）";
-            ThursdayLabel.Text = thursday.ToString().Substring(0, 10) + "　（木）";
-            FridayLabel.Text = friday.ToString().Substring(0, 10) + "　（金）";
-            SaturdayLabel.Text = saturday.ToString().Substring(0, 10) + "　（土）";
+            ThursdayLabel.Text  = thursday.ToString().Substring(0, 10) + "　（木）";
+            FridayLabel.Text    = friday.ToString().Substring(0, 10) + "　（金）";
+            SaturdayLabel.Text  = saturday.ToString().Substring(0, 10) + "　（土）";
 
 
 
