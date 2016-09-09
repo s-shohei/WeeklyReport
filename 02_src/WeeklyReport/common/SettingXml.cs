@@ -12,9 +12,8 @@ namespace WeeklyReport.common
     //setting.xmlを扱うクラス
     public class SettingXml
     {
-        /// </summary>
+
         //setting.xml読込み
-        /// </summary>
         public SettingTextModel load()
         {
             System.IO.FileStream fs = new System.IO.FileStream(location(), System.IO.FileMode.Open);

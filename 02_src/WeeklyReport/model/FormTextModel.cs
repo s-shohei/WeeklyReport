@@ -63,5 +63,6 @@ namespace WeeklyReport.model
         public string business { get; set; }
 
         public string play { get; set; }
-    }
+
+        }
 }

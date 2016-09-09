@@ -16,50 +16,58 @@ namespace WeeklyReport.common
         }
 
         /// <summary>
-        /// 日付を取得するメソッド
+        /// 日付取得
         /// </summary>
         /// <returns></returns>
         
         public DateTime getSysDateNow()
         {
-            //今日日付を取得する
+            //現在の日付を取得する
             DateTime dtToday = DateTime.Today;
             return dtToday;
         }
 
         /// <summary>
-        /// 今日日付から週報の日付を計算する（※日曜始まりとする）
+        /// 現在の日付から週報の日付を計算する
+        /// 週報は月曜始まり
         /// </summary>
         /// <returns></returns>
-
+        /// s
         public DayModel getWeekSelect()
         {
-
-            //今日日付の曜日を取得してintにキャストし、0（日曜）から引き算した結果を今日日付からマイナスする
+            //1週間が日曜日から始まり、土曜日で終わる時
+            //今週の最初の日
             DateTime dtSunday = getSysDateNow().AddDays(0 - (int)getSysDateNow().DayOfWeek);
 
-            DateTime dtMonday    = dtSunday.AddDays(1);
-            DateTime dtTuesday   = dtSunday.AddDays(2);
+            DateTime dtMonday = dtSunday.AddDays(1);
+            DateTime dtTuesday = dtSunday.AddDays(2);
             DateTime dtWednesday = dtSunday.AddDays(3);
-            DateTime dtThursday  = dtSunday.AddDays(4);
-            DateTime dtFriday    = dtSunday.AddDays(5);
-            DateTime dtSaturday  = dtSunday.AddDays(6);
+            DateTime dtThursday = dtSunday.AddDays(4);
+            DateTime dtFriday = dtSunday.AddDays(5);
+            DateTime dtSaturday = dtSunday.AddDays(6);
 
             DayModel model = new DayModel();
 
-            model.dtSunday      = dtSunday.ToString();
-            model.dtMonday      = dtMonday.ToString();
-            model.dtTuesday     = dtTuesday.ToString();
-            model.dtWednesday   = dtWednesday.ToString();
-            model.dtThursday    = dtThursday.ToString();
-            model.dtFriday      = dtFriday.ToString();
-            model.dtSaturday    = dtSaturday.ToString();
-
+            model.setSunday(dtSunday);
+            model.setMonday(dtMonday);
+            model.setTuesday(dtTuesday);
+            model.setWednesday(dtWednesday);
+            model.setThursday(dtThursday);
+            model.setFriday(dtFriday);
+            model.setSaturday(dtSaturday);
+            
             return model;
+
+
+
 
         }
 
+       
+
+
     }
+
 
 }
 

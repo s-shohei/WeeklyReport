@@ -52,7 +52,6 @@
     <Compile Include="common\TextOutput.cs" />
     <Compile Include="consts\KadouConst.cs" />
     <Compile Include="consts\TimeConst.cs" />
-    <Compile Include="control\KaigyoControl.cs" />
     <Compile Include="control\TimeCnbControl.cs" />
     <Compile Include="control\InputValueContorol.cs" />
     <Compile Include="control\KadouCnbControl.cs" />
