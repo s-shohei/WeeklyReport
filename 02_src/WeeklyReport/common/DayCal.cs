@@ -7,7 +7,7 @@ using WeeklyReport.model;
 
 namespace WeeklyReport.common
 {
-    class DayCal
+    public class DayCal
     {
 
         public  DayCal()
