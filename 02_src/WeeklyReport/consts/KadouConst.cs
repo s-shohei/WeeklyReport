@@ -13,6 +13,6 @@ namespace WeeklyReport.consts
         public const String kadoumid = "稼動状況(中)";
         public const String kadoumax = "稼動状況(大)";
         public const String dayoff = "休日";
-        //public const String sickday = "欠勤";
+        //public const String sickday = "欠勤".............;
     }
 }
