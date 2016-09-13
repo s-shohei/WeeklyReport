@@ -17,5 +17,7 @@ namespace WeeklyReport.consts
 
         //つぎこそは！
         //aaaaaaaaaaaa
+
+        // bbbb
     }
 }
