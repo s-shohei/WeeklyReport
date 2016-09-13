@@ -15,7 +15,7 @@ namespace WeeklyReport.consts
         public const String dayoff = "休日";
         //public const String sickday = "欠勤".............っっっっっっっっｓ;
 
-
+        //つぎこそは！
         //aaaaaaaaaaaa
 
         // bbbb
