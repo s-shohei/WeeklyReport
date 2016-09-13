@@ -27,12 +27,16 @@ namespace WeeklyReport
         //Form1をロード！
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO 日付取得のロジック（クラス）はUtilクラスにしたほうがいいのではないだろうか。
 
             //日付インスタンスnewする！
             DayCal hiduke = new DayCal();
             //日付の計算してdayに代入！
             DayModel day =  hiduke.getWeekSelect();
-            
+
+
+            // TODO 一時変数(sundayとかmondayなど)に一旦入れいている意味は何でしょうか。
+
             DateTime sunday = DateTime.Parse(day.dtSunday);
             DateTime monday = DateTime.Parse(day.dtMonday);
             DateTime tuesday = DateTime.Parse(day.dtTuesday);
@@ -51,16 +55,22 @@ namespace WeeklyReport
             SaturdayLabel.Text = saturday.ToString().Substring(0, 10) + "　（土）";
 
 
+            // TODO ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
 
             //分コンボボックスの中身を入れる
             TimeCnbControl time = new TimeCnbControl(this);
 
             time.setTime();
-            
+
+            // TODO ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
+
             // 稼動状況コンボボックスの中身を入れる
             KadouCnbControl kadou = new KadouCnbControl(this);
 
             kadou.setKadou();
+
+            // TODO ここもXMLを扱うUtilクラスを作ってみてはどうだろうか。
+            // インスタンスを他のクラス含め、多数作るのはよろしくない。
 
             //前週の週報を読込む
             SettingXml read = new SettingXml();

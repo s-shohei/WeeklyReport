@@ -18,7 +18,8 @@ namespace WeeklyReport.common
         /// <summary>
         /// 今日日付の取得
         /// </summary>
-        
+        // TODO このメソッドいるかな？
+
         public DateTime getSysDateNow()
         {
             //今日日付を取得する
@@ -30,11 +31,14 @@ namespace WeeklyReport.common
         /// 取得した日付から週報の日付を計算する（※週報は日曜はじまり）
         /// </summary>
         /// <returns></returns>
+        // TODO メソッド名「getWeekDays」のほうが一週間の日付を取るってわかりやすくないかな？
 
         public DayModel getWeekSelect()
         {
             //今日日付を数値化（0~6）し、日曜日付【0】からマイナスする
             DateTime dtSunday = getSysDateNow().AddDays(0 - (int)getSysDateNow().DayOfWeek);
+
+
 
             DateTime dtMonday = dtSunday.AddDays(1);
             DateTime dtTuesday = dtSunday.AddDays(2);
@@ -52,6 +56,13 @@ namespace WeeklyReport.common
             model.dtThursday = dtThursday.ToString();
             model.dtFriday = dtFriday.ToString();
             model.dtSaturday = dtSaturday.ToString();
+
+            // TODO このメソッド下記のように簡略化できないだろうか
+            // ここでついでにsubstringして、このモデルを使用するところではsubstringなどを意識せずに使えるようにしたほうがいいのかもしれない。
+
+            //DayModel dayModel = new DayModel();
+
+            //dayModel.dtSunday = dtSunday.AddDays(1).ToString().Substring(0, 10);
 
             return model;
         }

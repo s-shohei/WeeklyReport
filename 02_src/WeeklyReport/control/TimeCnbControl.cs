@@ -52,7 +52,7 @@ namespace WeeklyReport.control
             //コンボボックスにテキスト入力させない設定
             c.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            //初期値入力設定
+            //初期値(30分)入力設定
             c.SelectedIndex = 2;
         }
 

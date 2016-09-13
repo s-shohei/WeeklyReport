@@ -52,6 +52,8 @@ namespace WeeklyReport.common
 
         }
 
+
+        // TODO このような他のクラスでも使用できそうな（使用しそうな）メソッドはUtilクラスにするのもありかも
         /// <summary>
         /// setting.xmlファイルパスを返す
         /// </summary>

@@ -34,6 +34,7 @@ namespace WeeklyReport.common
         /// <summary>
         /// 体裁を整える
         /// </summary>
+        // TODO メソッド名「weeklyReportFormat」のほうがかっこよくない？
         public void teisai()
         {
             this.createHeader();
@@ -46,6 +47,8 @@ namespace WeeklyReport.common
         /// </summary>
         private void createHeader()
         {
+            // TODO ここらへん、utilクラスから取得するようにしようか。
+            // ただ、モデルクラスがほしいだけだから。そのためにいちいちインスタンスを生成するのはイケていないかもしれない。
             DayCal hiduke = new DayCal();
             DayModel day = hiduke.getWeekSelect();
 
@@ -68,6 +71,7 @@ namespace WeeklyReport.common
             DayCal hiduke = new DayCal();
             day = hiduke.getWeekSelect();
 
+            // TODO とてもカオスですね(ToT)/~~~なんとかしましょう。
             sb.Append("■作業内容\r\n");
             if (ft_model.kadou1 != KadouConst.dayoff)
                 {
@@ -159,6 +163,7 @@ namespace WeeklyReport.common
         /// </summary>
         public void textPrintOut()
         {
+            // TODO ファイル名を構成しているロジックは別だししましょうか。
 
             //Shift JISで書き込む
             //書き込むファイルが既に存在している場合は、上書きする;
@@ -172,6 +177,10 @@ namespace WeeklyReport.common
             sw.Close();
 
         }
+
+
+        // TODO なにのフォルダパスを返すのか？
+        // これも今後共通して使用できそうなのでUtilクラスにしましょうか。
 
         /// <summary>
         /// フォルダパスを返す

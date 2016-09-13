@@ -51,6 +51,7 @@ namespace WeeklyReport.control
             //初期値入力設定
             if (c.Name == "Kadou1" || c.Name == "Kadou7" ) 
             {
+                // 土曜と日曜には初期値として「休日」を設定
                 c.SelectedIndex = 3;
             }
             else
