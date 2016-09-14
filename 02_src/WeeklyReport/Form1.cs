@@ -11,6 +11,8 @@ using WeeklyReport.common;
 using WeeklyReport.model;
 using WeeklyReport.consts;
 using WeeklyReport.control;
+using WeeklyReport.util;
+
 
 namespace WeeklyReport
 {
@@ -27,47 +29,32 @@ namespace WeeklyReport
         //Form1をロード！
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO 日付取得のロジック（クラス）はUtilクラスにしたほうがいいのではないだろうか。
+            // TODO ★日付取得のロジック（クラス）はUtilクラスにしたほうがいいのではないだろうか。
 
-            //日付インスタンスnewする！
-            DayCal hiduke = new DayCal();
-            //日付の計算してdayに代入！
-            DayModel day =  hiduke.getWeekSelect();
+            //日付計算結果を取得
+            DayModel day =  DayUtil.getWeekDays();
 
+            // TODO ★一時変数(sundayとかmondayなど)に一旦入れいている意味は何でしょうか。
 
-            // TODO 一時変数(sundayとかmondayなど)に一旦入れいている意味は何でしょうか。
-
-            DateTime sunday = DateTime.Parse(day.dtSunday);
-            DateTime monday = DateTime.Parse(day.dtMonday);
-            DateTime tuesday = DateTime.Parse(day.dtTuesday);
-            DateTime wednesday = DateTime.Parse(day.dtWednesday);
-            DateTime thursday = DateTime.Parse(day.dtThursday);
-            DateTime friday = DateTime.Parse(day.dtFriday);
-            DateTime saturday = DateTime.Parse(day.dtSaturday);
-
-            //ラベルに代入していく！
-            SundayLabel.Text = sunday.ToString().Substring(0,10) + "　（日）";
-            MondayLabel.Text = monday.ToString().Substring(0, 10) + "　（月）";
-            TuesdayLabel.Text = tuesday.ToString().Substring(0, 10) + "　（火）";
-            WednesdayLabel.Text = wednesday.ToString().Substring(0, 10) + "　（水）";
-            ThursdayLabel.Text = thursday.ToString().Substring(0, 10) + "　（木）";
-            FridayLabel.Text = friday.ToString().Substring(0, 10) + "　（金）";
-            SaturdayLabel.Text = saturday.ToString().Substring(0, 10) + "　（土）";
+            //ラベルに代入
+            SundayLabel.Text = day.dtSunday + "　（日）";
+            MondayLabel.Text = day.dtMonday + "　（月）";
+            TuesdayLabel.Text = day.dtTuesday + "　（火）";
+            WednesdayLabel.Text = day.dtWednesday + "　（水）";
+            ThursdayLabel.Text = day.dtThursday + "　（木）";
+            FridayLabel.Text = day.dtFriday + "　（金）";
+            SaturdayLabel.Text = day.dtSaturday + "　（土）";
 
 
-            // TODO ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
+            // TODO ★ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
 
             //分コンボボックスの中身を入れる
-            TimeCnbControl time = new TimeCnbControl(this);
+            ConboUtil.setTime(this);
 
-            time.setTime();
-
-            // TODO ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
+            // TODO ★ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
 
             // 稼動状況コンボボックスの中身を入れる
-            KadouCnbControl kadou = new KadouCnbControl(this);
-
-            kadou.setKadou();
+            ConboUtil.setKadou(this);
 
             // TODO ここもXMLを扱うUtilクラスを作ってみてはどうだろうか。
             // インスタンスを他のクラス含め、多数作るのはよろしくない。
@@ -93,7 +80,7 @@ namespace WeeklyReport
 
             // 体裁を整える
             TextOutput o = new TextOutput(model);
-            o.teisai();
+            o.weeklyReportFormat();
             o.textPrintOut();
 
             //setting.xmlに書き出す

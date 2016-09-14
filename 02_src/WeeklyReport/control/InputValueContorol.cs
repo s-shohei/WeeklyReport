@@ -26,9 +26,9 @@ namespace WeeklyReport.control
 
             FormTextModel model = new FormTextModel();
 
-            // TODO あれ？全スペ入ってね？31行目
+            // TODO ★あれ？全スペ入ってね？31行目
             //formから渡ってきた開始時間の値をモデルにセット
-     　　　 //テキストボックスに入力されたTextの値をとりたいからTextになる
+            //テキストボックスに入力されたTextの値をとりたいからTextになる
             model.startHH1 = form1.StartHH1.Text;
             model.startHH2 = form1.StartHH2.Text;
             model.startHH3 = form1.StartHH3.Text;

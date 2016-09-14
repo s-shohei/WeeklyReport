@@ -8,6 +8,7 @@ using WeeklyReport.model;
 using System.Windows.Forms;
 using WeeklyReport.consts;
 using WeeklyReport.common;
+using WeeklyReport.util;
 
 namespace WeeklyReport.common
 {
@@ -20,7 +21,6 @@ namespace WeeklyReport.common
         StringBuilder sb = new StringBuilder();
         FormTextModel ft_model;
         SettingTextModel st_model;
-        DayModel day;
 
         /// <summary>
         /// コンストラクタ
@@ -34,8 +34,8 @@ namespace WeeklyReport.common
         /// <summary>
         /// 体裁を整える
         /// </summary>
-        // TODO メソッド名「weeklyReportFormat」のほうがかっこよくない？
-        public void teisai()
+        // TODO ★メソッド名「weeklyReportFormat」のほうがかっこよくない？
+        public void weeklyReportFormat()
         {
             this.createHeader();
             this.createBody();
@@ -47,10 +47,9 @@ namespace WeeklyReport.common
         /// </summary>
         private void createHeader()
         {
-            // TODO ここらへん、utilクラスから取得するようにしようか。
+            // TODO ★ここらへん、utilクラスから取得するようにしようか。
             // ただ、モデルクラスがほしいだけだから。そのためにいちいちインスタンスを生成するのはイケていないかもしれない。
-            DayCal hiduke = new DayCal();
-            DayModel day = hiduke.getWeekSelect();
+            DayModel day = DayUtil.getWeekDays();
 
             SettingXml read = new SettingXml();
             st_model = read.load();
@@ -68,8 +67,7 @@ namespace WeeklyReport.common
         /// </summary>
         private void createBody()
         {
-            DayCal hiduke = new DayCal();
-            day = hiduke.getWeekSelect();
+            DayModel day = DayUtil.getWeekDays();
 
             // TODO とてもカオスですね(ToT)/~~~なんとかしましょう。
             sb.Append("■作業内容\r\n");
@@ -163,11 +161,12 @@ namespace WeeklyReport.common
         /// </summary>
         public void textPrintOut()
         {
+            DayModel day = DayUtil.getWeekDays();
             // TODO ファイル名を構成しているロジックは別だししましょうか。
 
             //Shift JISで書き込む
             //書き込むファイルが既に存在している場合は、上書きする;
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(location() + "週報_" + st_model.name.Replace("　", "") + "_" + day.dtSunday.ToString().Substring(0, 10).Replace("/","") + "～" + day.dtSaturday.ToString().Substring(0, 10).Replace("/", "") + ".txt", false, System.Text.Encoding.GetEncoding("shift_jis"));
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.folder_location() + "週報_" + st_model.name.Replace("　", "") + "_" + day.dtSunday.ToString().Substring(0, 10).Replace("/","") + "～" + day.dtSaturday.ToString().Substring(0, 10).Replace("/", "") + ".txt", false, System.Text.Encoding.GetEncoding("shift_jis"));
 
             //Formに入力された内容をテキストに書き込む
             sw.Write(sb);
@@ -178,18 +177,6 @@ namespace WeeklyReport.common
 
         }
 
-
-        // TODO なにのフォルダパスを返すのか？
-        // これも今後共通して使用できそうなのでUtilクラスにしましょうか。
-
-        /// <summary>
-        /// フォルダパスを返す
-        /// </summary>
-        public string location()
-        {
-            string appPath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase ;
-            return appPath;
-        }
 
     }
 }
