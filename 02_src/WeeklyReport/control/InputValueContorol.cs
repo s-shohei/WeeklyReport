@@ -26,7 +26,6 @@ namespace WeeklyReport.control
 
             FormTextModel model = new FormTextModel();
 
-            // TODO ★あれ？全スペ入ってね？31行目
             //formから渡ってきた開始時間の値をモデルにセット
             //テキストボックスに入力されたTextの値をとりたいからTextになる
             model.startHH1 = form1.StartHH1.Text;

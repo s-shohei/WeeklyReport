@@ -9,7 +9,10 @@ namespace WeeklyReport.util
 {
     public static class DayUtil
     {
-        //日付計算メソッド
+        /// <summary>
+        /// 起動日より一週間の日付を計算
+        /// </summary>
+        /// <returns>一週間の日付が入ったモデルクラス</returns>
         public static DayModel getWeekDays()
         {
             //今日日付の取得
@@ -27,13 +30,6 @@ namespace WeeklyReport.util
             dayModel.dtThursday = dtSunday.AddDays(4).ToString().Substring(0, 10);
             dayModel.dtFriday = dtSunday.AddDays(5).ToString().Substring(0, 10);
             dayModel.dtSaturday = dtSunday.AddDays(6).ToString().Substring(0, 10);
-
-            // TODO ★このメソッド下記のように簡略化できないだろうか
-            // ここでついでにsubstringして、このモデルを使用するところではsubstringなどを意識せずに使えるようにしたほうがいいのかもしれない。
-
-            //DayModel dayModel = new DayModel();
-
-            //dayModel.dtSunday = dtSunday.AddDays(1).ToString().Substring(0, 10);
 
             return dayModel;
         }

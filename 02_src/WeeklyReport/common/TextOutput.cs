@@ -21,6 +21,7 @@ namespace WeeklyReport.common
         StringBuilder sb = new StringBuilder();
         FormTextModel ft_model;
         SettingTextModel st_model;
+        DayModel day;
 
         /// <summary>
         /// コンストラクタ
@@ -29,17 +30,17 @@ namespace WeeklyReport.common
         {
             // モデルクラスを受け取る
             ft_model = model;
+            day = DayUtil.getWeekDays();
         }
 
         /// <summary>
         /// 体裁を整える
         /// </summary>
-        // TODO ★メソッド名「weeklyReportFormat」のほうがかっこよくない？
         public void weeklyReportFormat()
         {
             this.createHeader();
             this.createBody();
-            
+
         }
 
         /// <summary>
@@ -47,10 +48,6 @@ namespace WeeklyReport.common
         /// </summary>
         private void createHeader()
         {
-            // TODO ★ここらへん、utilクラスから取得するようにしようか。
-            // ただ、モデルクラスがほしいだけだから。そのためにいちいちインスタンスを生成するのはイケていないかもしれない。
-            DayModel day = DayUtil.getWeekDays();
-
             SettingXml read = new SettingXml();
             st_model = read.load();
 
@@ -67,83 +64,82 @@ namespace WeeklyReport.common
         /// </summary>
         private void createBody()
         {
-            DayModel day = DayUtil.getWeekDays();
 
             // TODO とてもカオスですね(ToT)/~~~なんとかしましょう。
             sb.Append("■作業内容\r\n");
             if (ft_model.kadou1 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.startHH1 + ":" + ft_model.startMM1 + "-" + ft_model.endHH1 + ":" + ft_model.endMM1 + "  " + ft_model.kadou1 + "\r\n");
-                    sb.Append(ft_model.work1 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.startHH1 + ":" + ft_model.startMM1 + "-" + ft_model.endHH1 + ":" + ft_model.endMM1 + "  " + ft_model.kadou1 + "\r\n");
+                sb.Append(ft_model.work1 + "\r\n\r\n");
+            }
             else
-                { 
-                    sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.kadou1 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.kadou1 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou2 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.startHH2 + ":" + ft_model.startMM2 + "-" + ft_model.endHH2 + ":" + ft_model.endMM2 + "  " + ft_model.kadou2 + "\r\n");
-                    sb.Append(ft_model.work2 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.startHH2 + ":" + ft_model.startMM2 + "-" + ft_model.endHH2 + ":" + ft_model.endMM2 + "  " + ft_model.kadou2 + "\r\n");
+                sb.Append(ft_model.work2 + "\r\n\r\n");
+            }
             else
-                {
-                    sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.kadou2 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.kadou2 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou3 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.startHH3 + ":" + ft_model.startMM3 + "-" + ft_model.endHH3 + ":" + ft_model.endMM3 + "  " + ft_model.kadou3 + "\r\n");
-                    sb.Append(ft_model.work3 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.startHH3 + ":" + ft_model.startMM3 + "-" + ft_model.endHH3 + ":" + ft_model.endMM3 + "  " + ft_model.kadou3 + "\r\n");
+                sb.Append(ft_model.work3 + "\r\n\r\n");
+            }
             else
-               {
-                    sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.kadou3 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.kadou3 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou4 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.startHH4 + ":" + ft_model.startMM4 + "-" + ft_model.endHH4 + ":" + ft_model.endMM4 + "  " + ft_model.kadou4 + "\r\n");
-                    sb.Append(ft_model.work4 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.startHH4 + ":" + ft_model.startMM4 + "-" + ft_model.endHH4 + ":" + ft_model.endMM4 + "  " + ft_model.kadou4 + "\r\n");
+                sb.Append(ft_model.work4 + "\r\n\r\n");
+            }
             else
-                {
-                    sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.kadou4 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.kadou4 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou5 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.startHH5 + ":" + ft_model.startMM5 + "-" + ft_model.endHH5 + ":" + ft_model.endMM5 + "  " + ft_model.kadou5 + "\r\n");
-                    sb.Append(ft_model.work5 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.startHH5 + ":" + ft_model.startMM5 + "-" + ft_model.endHH5 + ":" + ft_model.endMM5 + "  " + ft_model.kadou5 + "\r\n");
+                sb.Append(ft_model.work5 + "\r\n\r\n");
+            }
             else
-                {
-                    sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.kadou5 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.kadou5 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou6 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.startHH6 + ":" + ft_model.startMM6 + "-" + ft_model.endHH6 + ":" + ft_model.endMM6 + "  " + ft_model.kadou6 + "\r\n");
-                    sb.Append(ft_model.work6 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.startHH6 + ":" + ft_model.startMM6 + "-" + ft_model.endHH6 + ":" + ft_model.endMM6 + "  " + ft_model.kadou6 + "\r\n");
+                sb.Append(ft_model.work6 + "\r\n\r\n");
+            }
             else
-                {
-                    sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.kadou6 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.kadou6 + "\r\n\r\n");
+            }
 
             if (ft_model.kadou7 != KadouConst.dayoff)
-                {
-                    sb.Append(day.dtSaturday.ToString().Substring(0, 10) + "（土）" + "  " + ft_model.startHH7 + ":" + ft_model.startMM7 + "-" + ft_model.endHH7 + ":" + ft_model.endMM7 + "  " + ft_model.kadou7 + "\r\n");
-                    sb.Append(ft_model.work7 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtSaturday.ToString().Substring(0, 10) + "（土）" + "  " + ft_model.startHH7 + ":" + ft_model.startMM7 + "-" + ft_model.endHH7 + ":" + ft_model.endMM7 + "  " + ft_model.kadou7 + "\r\n");
+                sb.Append(ft_model.work7 + "\r\n\r\n");
+            }
             else
-                {
-                    sb.Append(day.dtSaturday.ToString().Substring(0, 10) + "（土）" + "  " + ft_model.kadou7 + "\r\n\r\n");
-                }
+            {
+                sb.Append(day.dtSaturday.ToString().Substring(0, 10) + "（土）" + "  " + ft_model.kadou7 + "\r\n\r\n");
+            }
 
             sb.Append("----------------------------------------------------\r\n");
             sb.Append("■問題点・改善案：\r\n");
-            sb.Append(ft_model.mondaiKaizen+ "\r\n\r\n");
+            sb.Append(ft_model.mondaiKaizen + "\r\n\r\n");
             sb.Append("----------------------------------------------------\r\n");
             sb.Append("■前週掲げた改善案の実施結果：\r\n");
             sb.Append(ft_model.result + "\r\n\r\n");
@@ -161,22 +157,38 @@ namespace WeeklyReport.common
         /// </summary>
         public void textPrintOut()
         {
-            DayModel day = DayUtil.getWeekDays();
-            // TODO ファイル名を構成しているロジックは別だししましょうか。
-
             //Shift JISで書き込む
             //書き込むファイルが既に存在している場合は、上書きする;
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.folder_location() + "週報_" + st_model.name.Replace("　", "") + "_" + day.dtSunday.ToString().Substring(0, 10).Replace("/","") + "～" + day.dtSaturday.ToString().Substring(0, 10).Replace("/", "") + ".txt", false, System.Text.Encoding.GetEncoding("shift_jis"));
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.folder_location() + createWeeklyReportFileName(), false, System.Text.Encoding.GetEncoding("shift_jis"));
 
             //Formに入力された内容をテキストに書き込む
             sw.Write(sb);
 
-
             //閉じる
             sw.Close();
-
         }
 
+        /// <summary>
+        /// 週報のファイル名を生成
+        /// </summary>
+        /// <returns>週報のファイル名</returns>
+        private string createWeeklyReportFileName()
+        {
+            // 名前部分を生成
+            // Ex.) 週報_新保華_
+            string namePart = "週報_" + st_model.name.Replace("　", "") + "_";
 
+            // 日付部分を生成
+            // Ex.) 20160911～20160917
+            string daysPart = day.dtSunday.ToString().Replace("/", "") + "～" + day.dtSaturday.ToString().Replace("/", "");
+
+            // ファイルの拡張子
+            string extentionPart = ".txt";
+
+            // 結合
+            string fileName = namePart + daysPart + extentionPart;
+
+            return fileName;
+        }
     }
 }

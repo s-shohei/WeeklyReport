@@ -24,17 +24,12 @@ namespace WeeklyReport
             InitializeComponent();
         }
 
-      
-
         //Form1をロード！
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO ★日付取得のロジック（クラス）はUtilクラスにしたほうがいいのではないだろうか。
 
             //日付計算結果を取得
-            DayModel day =  DayUtil.getWeekDays();
-
-            // TODO ★一時変数(sundayとかmondayなど)に一旦入れいている意味は何でしょうか。
+            DayModel day = DayUtil.getWeekDays();
 
             //ラベルに代入
             SundayLabel.Text = day.dtSunday + "　（日）";
@@ -45,13 +40,8 @@ namespace WeeklyReport
             FridayLabel.Text = day.dtFriday + "　（金）";
             SaturdayLabel.Text = day.dtSaturday + "　（土）";
 
-
-            // TODO ★ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
-
             //分コンボボックスの中身を入れる
             ConboUtil.setTime(this);
-
-            // TODO ★ここもコンボボックスを扱うUtilクラスを作ってみてはどうだろうか。
 
             // 稼動状況コンボボックスの中身を入れる
             ConboUtil.setKadou(this);

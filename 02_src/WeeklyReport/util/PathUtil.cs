@@ -8,7 +8,6 @@ namespace WeeklyReport.util
 {
     public static class PathUtil
     {
-        // TODO ★このような他のクラスでも使用できそうな（使用しそうな）メソッドはUtilクラスにするのもありかも
         // setting.xmlのファイルパスを返す
         public static string file_location()
         {
@@ -16,18 +15,14 @@ namespace WeeklyReport.util
             return appPath;
         }
 
-        // TODO ★なにのフォルダパスを返すのか？
-        // これも今後共通して使用できそうなのでUtilクラスにしましょうか。
-
-        // setting.xmlのフォルダパスを返す
+        /// <summary>
+        /// setting.xmlのフォルダパスを返す
+        /// </summary>
+        /// <returns></returns>
         public static string folder_location()
         {
             string appPath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
             return appPath;
         }
-
-
-
-
     }
 }
