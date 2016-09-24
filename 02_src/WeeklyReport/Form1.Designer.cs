@@ -116,6 +116,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartHH1
@@ -800,17 +803,17 @@
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(629, 659);
+            this.Play.Location = new System.Drawing.Point(625, 661);
             this.Play.Multiline = true;
             this.Play.Name = "Play";
             this.Play.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Play.Size = new System.Drawing.Size(580, 120);
-            this.Play.TabIndex = 45;
+            this.Play.Size = new System.Drawing.Size(580, 110);
+            this.Play.TabIndex = 46;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(625, 644);
+            this.label19.Location = new System.Drawing.Point(625, 646);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(65, 12);
             this.label19.TabIndex = 135;
@@ -819,7 +822,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(625, 506);
+            this.label18.Location = new System.Drawing.Point(625, 515);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(65, 12);
             this.label18.TabIndex = 134;
@@ -827,35 +830,35 @@
             // 
             // business
             // 
-            this.business.Location = new System.Drawing.Point(629, 521);
+            this.business.Location = new System.Drawing.Point(625, 530);
             this.business.Multiline = true;
             this.business.Name = "business";
             this.business.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.business.Size = new System.Drawing.Size(580, 120);
-            this.business.TabIndex = 44;
+            this.business.Size = new System.Drawing.Size(580, 110);
+            this.business.TabIndex = 45;
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(627, 260);
+            this.Result.Location = new System.Drawing.Point(625, 295);
             this.Result.Multiline = true;
             this.Result.Name = "Result";
             this.Result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Result.Size = new System.Drawing.Size(582, 200);
-            this.Result.TabIndex = 43;
+            this.Result.Size = new System.Drawing.Size(582, 194);
+            this.Result.TabIndex = 44;
             // 
             // MondaiKaizen
             // 
-            this.MondaiKaizen.Location = new System.Drawing.Point(625, 20);
+            this.MondaiKaizen.Location = new System.Drawing.Point(625, 162);
             this.MondaiKaizen.Multiline = true;
             this.MondaiKaizen.Name = "MondaiKaizen";
             this.MondaiKaizen.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MondaiKaizen.Size = new System.Drawing.Size(582, 200);
-            this.MondaiKaizen.TabIndex = 42;
+            this.MondaiKaizen.Size = new System.Drawing.Size(582, 110);
+            this.MondaiKaizen.TabIndex = 43;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(625, 484);
+            this.label17.Location = new System.Drawing.Point(625, 495);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 12);
             this.label17.TabIndex = 130;
@@ -864,7 +867,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(625, 234);
+            this.label16.Location = new System.Drawing.Point(625, 279);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 12);
             this.label16.TabIndex = 129;
@@ -873,11 +876,40 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(625, 5);
+            this.label15.Location = new System.Drawing.Point(625, 3);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(95, 12);
             this.label15.TabIndex = 128;
             this.label15.Text = "■問題点・改善案";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(625, 34);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(582, 110);
+            this.textBox1.TabIndex = 42;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(626, 19);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(65, 12);
+            this.label27.TabIndex = 137;
+            this.label27.Text = "＜業務内＞";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(626, 147);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(53, 12);
+            this.label28.TabIndex = 138;
+            this.label28.Text = "＜自己＞";
             // 
             // Form1
             // 
@@ -885,6 +917,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1241, 827);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.savebotton);
             this.Controls.Add(this.textbotton);
             this.Controls.Add(this.Play);
@@ -1071,6 +1106,9 @@
         internal System.Windows.Forms.Label label17;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Label label15;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.Label label27;
+        internal System.Windows.Forms.Label label28;
     }
 }
 
