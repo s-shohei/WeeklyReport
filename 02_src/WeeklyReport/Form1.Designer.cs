@@ -112,11 +112,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.business = new System.Windows.Forms.TextBox();
             this.Result = new System.Windows.Forms.TextBox();
-            this.MondaiKaizen = new System.Windows.Forms.TextBox();
+            this.MondaiKaizen_Jiko = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MondaiKaizen_Gyomu = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -846,14 +846,14 @@
             this.Result.Size = new System.Drawing.Size(582, 194);
             this.Result.TabIndex = 44;
             // 
-            // MondaiKaizen
+            // MondaiKaizen_Jiko
             // 
-            this.MondaiKaizen.Location = new System.Drawing.Point(625, 162);
-            this.MondaiKaizen.Multiline = true;
-            this.MondaiKaizen.Name = "MondaiKaizen";
-            this.MondaiKaizen.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MondaiKaizen.Size = new System.Drawing.Size(582, 110);
-            this.MondaiKaizen.TabIndex = 43;
+            this.MondaiKaizen_Jiko.Location = new System.Drawing.Point(625, 162);
+            this.MondaiKaizen_Jiko.Multiline = true;
+            this.MondaiKaizen_Jiko.Name = "MondaiKaizen_Jiko";
+            this.MondaiKaizen_Jiko.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.MondaiKaizen_Jiko.Size = new System.Drawing.Size(582, 110);
+            this.MondaiKaizen_Jiko.TabIndex = 43;
             // 
             // label17
             // 
@@ -882,15 +882,15 @@
             this.label15.TabIndex = 128;
             this.label15.Text = "■問題点・改善案";
             // 
-            // textBox1
+            // MondaiKaizen_Gyomu
             // 
-            this.textBox1.Location = new System.Drawing.Point(625, 34);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(582, 110);
-            this.textBox1.TabIndex = 42;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.MondaiKaizen_Gyomu.Location = new System.Drawing.Point(625, 34);
+            this.MondaiKaizen_Gyomu.Multiline = true;
+            this.MondaiKaizen_Gyomu.Name = "MondaiKaizen_Gyomu";
+            this.MondaiKaizen_Gyomu.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.MondaiKaizen_Gyomu.Size = new System.Drawing.Size(582, 110);
+            this.MondaiKaizen_Gyomu.TabIndex = 42;
+            this.MondaiKaizen_Gyomu.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label27
             // 
@@ -919,7 +919,7 @@
             this.ClientSize = new System.Drawing.Size(1241, 827);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MondaiKaizen_Gyomu);
             this.Controls.Add(this.savebotton);
             this.Controls.Add(this.textbotton);
             this.Controls.Add(this.Play);
@@ -927,7 +927,7 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.business);
             this.Controls.Add(this.Result);
-            this.Controls.Add(this.MondaiKaizen);
+            this.Controls.Add(this.MondaiKaizen_Jiko);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -1102,11 +1102,11 @@
         internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.TextBox business;
         internal System.Windows.Forms.TextBox Result;
-        internal System.Windows.Forms.TextBox MondaiKaizen;
+        internal System.Windows.Forms.TextBox MondaiKaizen_Jiko;
         internal System.Windows.Forms.Label label17;
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox MondaiKaizen_Gyomu;
         internal System.Windows.Forms.Label label27;
         internal System.Windows.Forms.Label label28;
     }

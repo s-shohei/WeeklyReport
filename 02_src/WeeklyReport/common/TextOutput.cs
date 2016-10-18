@@ -139,7 +139,8 @@ namespace WeeklyReport.common
 
             sb.Append("----------------------------------------------------\r\n");
             sb.Append("■問題点・改善案：\r\n");
-            sb.Append(ft_model.mondaiKaizen + "\r\n\r\n");
+            sb.Append(ft_model.mondaiKaizen_gyomu + "\r\n\r\n");
+            sb.Append(ft_model.mondaiKaizen_jiko + "\r\n\r\n");
             sb.Append("----------------------------------------------------\r\n");
             sb.Append("■前週掲げた改善案の実施結果：\r\n");
             sb.Append(ft_model.result + "\r\n\r\n");

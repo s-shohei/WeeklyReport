@@ -83,7 +83,8 @@ namespace WeeklyReport.control
             model.work7 = form1.work7.Text;
 
             //formから渡ってきた問題点・改善案の値をモデルにセット！
-            model.mondaiKaizen = form1.MondaiKaizen.Text;
+            model.mondaiKaizen_gyomu = form1.MondaiKaizen_Gyomu.Text;
+            model.mondaiKaizen_jiko = form1.MondaiKaizen_Jiko.Text;
 
             //formから渡ってきたの改善案の実施結果をモデルにセット！
             model.result = form1.Result.Text;

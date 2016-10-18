@@ -38,7 +38,8 @@ namespace WeeklyReport.common
             SettingTextModel model = new SettingTextModel();
 
             model = load();
-            model.lastweek_mondai = f.MondaiKaizen.Text;
+            model.lastweek_mondai_gyomu = f.MondaiKaizen_Gyomu.Text;
+            model.lastweek_mondai_jiko = f.MondaiKaizen_Jiko.Text;
             model.lastweek_result = f.Result.Text;
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SettingTextModel));

@@ -56,7 +56,8 @@ namespace WeeklyReport.model
         public string work6 { get; set; }
         public string work7 { get; set; }
 
-        public string mondaiKaizen { get; set; }
+        public string mondaiKaizen_gyomu { get; set; }
+        public string mondaiKaizen_jiko { get; set; }
 
         public string result { get; set; }
 

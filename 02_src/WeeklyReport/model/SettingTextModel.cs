@@ -22,8 +22,11 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("name")]
         public String name { get; set; }
 
-        [System.Xml.Serialization.XmlElement("lastweek_mondai")]
-        public String lastweek_mondai { get; set; }
+        [System.Xml.Serialization.XmlElement("lastweek_mondai_gyomu")]
+        public String lastweek_mondai_gyomu { get; set; }
+
+        [System.Xml.Serialization.XmlElement("lastweek_mondai_jiko")]
+        public String lastweek_mondai_jiko { get; set; }
 
         [System.Xml.Serialization.XmlElement("lastweek_result")]
         public String lastweek_result { get; set; }

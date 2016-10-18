@@ -56,7 +56,8 @@ namespace WeeklyReport
             //読込んだ週報の改行を置換し、フォームにセット
             KaigyoControl re_text = new KaigyoControl(st_text);
 
-            MondaiKaizen.Text = re_text.kaigyo_lastweek_mondai();
+            MondaiKaizen_Gyomu.Text = re_text.kaigyo_lastweek_mondai_gyomu();
+            MondaiKaizen_Jiko.Text = re_text.kaigyo_lastweek_mondai_jiko();
             Result.Text = re_text.kaigyo_lastweek_result();
         }
 

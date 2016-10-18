@@ -23,9 +23,14 @@ namespace WeeklyReport.control
         }
 
       
-        public String kaigyo_lastweek_mondai()
+        public String kaigyo_lastweek_mondai_gyomu()
         {
-            return kaigyoRePlace(st_model.lastweek_mondai);
+            return kaigyoRePlace(st_model.lastweek_mondai_gyomu);
+        }
+
+        public String kaigyo_lastweek_mondai_jiko()
+        {
+            return kaigyoRePlace(st_model.lastweek_mondai_jiko);
         }
 
         public String kaigyo_lastweek_result()
