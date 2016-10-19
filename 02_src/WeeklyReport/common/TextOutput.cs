@@ -160,7 +160,7 @@ namespace WeeklyReport.common
         {
             //Shift JISで書き込む
             //書き込むファイルが既に存在している場合は、上書きする;
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.folder_location() + createWeeklyReportFileName(), false, System.Text.Encoding.GetEncoding("shift_jis"));
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.setting_folder_location() + createWeeklyReportFileName(), false, System.Text.Encoding.GetEncoding("shift_jis"));
 
             //Formに入力された内容をテキストに書き込む
             sw.Write(sb);

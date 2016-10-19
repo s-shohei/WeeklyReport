@@ -18,7 +18,7 @@ namespace WeeklyReport.common
         //setting.xml読込み
         public SettingTextModel load()
         {
-            System.IO.FileStream fs = new System.IO.FileStream(PathUtil.file_location(), System.IO.FileMode.Open);
+            System.IO.FileStream fs = new System.IO.FileStream(PathUtil.setting_file_location(), System.IO.FileMode.Open);
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SettingTextModel));
 
@@ -44,7 +44,7 @@ namespace WeeklyReport.common
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SettingTextModel));
 
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.file_location(), false, new System.Text.UTF8Encoding(false));
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.setting_file_location(), false, new System.Text.UTF8Encoding(false));
 
             //シリアル化し、XMLファイルに保存する
             serializer.Serialize(sw, model);
