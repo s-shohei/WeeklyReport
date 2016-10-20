@@ -48,8 +48,8 @@ namespace WeeklyReport.common
         /// </summary>
         private void createHeader()
         {
-            SettingXml read = new SettingXml();
-            st_model = read.load();
+            Xml read = new Xml();
+            st_model = read.setting_load();
 
             sb.Append("=====================================================\r\n");
             sb.Append("【" + st_model.division + "】\r\n");

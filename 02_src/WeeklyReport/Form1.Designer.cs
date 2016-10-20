@@ -890,7 +890,6 @@
             this.MondaiKaizen_Gyomu.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.MondaiKaizen_Gyomu.Size = new System.Drawing.Size(582, 110);
             this.MondaiKaizen_Gyomu.TabIndex = 42;
-            this.MondaiKaizen_Gyomu.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label27
             // 
@@ -900,7 +899,6 @@
             this.label27.Size = new System.Drawing.Size(65, 12);
             this.label27.TabIndex = 137;
             this.label27.Text = "＜業務内＞";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label28
             // 

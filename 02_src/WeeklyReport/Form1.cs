@@ -50,8 +50,8 @@ namespace WeeklyReport
             // インスタンスを他のクラス含め、多数作るのはよろしくない。
 
             //前週の週報を読込む
-            SettingXml read = new SettingXml();
-            SettingTextModel st_text = read.load();
+            Xml read = new Xml();
+            SettingTextModel st_text = read.setting_load();
 
             //読込んだ週報の改行を置換し、フォームにセット
             KaigyoControl re_text = new KaigyoControl(st_text);
@@ -75,8 +75,8 @@ namespace WeeklyReport
             o.textPrintOut();
 
             //setting.xmlに書き出す
-            SettingXml w = new SettingXml();
-            w.write(this);
+            Xml w = new Xml();
+            w.setting_write(this);
 
             MessageBox.Show("テキスト出力が完了しました。");
 
@@ -87,14 +87,6 @@ namespace WeeklyReport
             MessageBox.Show("To Be Continue!");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }

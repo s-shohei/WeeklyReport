@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="common\SettingXml.cs" />
+    <Compile Include="common\Xml.cs" />
     <Compile Include="common\TextOutput.cs" />
     <Compile Include="consts\KadouConst.cs" />
     <Compile Include="consts\TimeConst.cs" />
