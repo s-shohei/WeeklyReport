@@ -11,7 +11,7 @@ using WeeklyReport.control;
 
 namespace WeeklyReport.util
 {
-    class XmlLoad
+    class XmlLoadUtil
     {
         /// <summary>
         /// 前週の週報を読み込み

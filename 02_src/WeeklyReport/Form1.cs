@@ -52,7 +52,7 @@ namespace WeeklyReport
 
 
 
-
+            //前週の週報ファイルの読み込み
 
             MondaiKaizen_Gyomu.Text = re_text.kaigyo_lastweek_mondai_gyomu();
             MondaiKaizen_Jiko.Text = re_text.kaigyo_lastweek_mondai_jiko();
