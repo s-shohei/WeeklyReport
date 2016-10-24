@@ -14,15 +14,58 @@ namespace WeeklyReport.control
 
         // インスタンス変数
         SettingTextModel st_model;
+        SaveTextModel sv_model;
 
-        //コンストラクタ
+
+        //setting.xmlコンストラクタ
         public KaigyoControl (SettingTextModel model)
         {
             // モデルクラスを受け取る
             st_model = model;
         }
 
-      
+        //save_text.xmlコンストラクタ
+        public KaigyoControl(SaveTextModel model)
+        {
+            // モデルクラスを受け取る
+            sv_model = model;
+        }
+
+        public String kaigyo_sunday()
+        {
+            return kaigyoRePlace(sv_model.sunday);
+        }
+
+        public String kaigyo_monday()
+        {
+            return kaigyoRePlace(sv_model.monday);
+        }
+
+        public String kaigyo_tuesday()
+        {
+            return kaigyoRePlace(sv_model.tuesday);
+        }
+
+        public String kaigyo_wednesday()
+        {
+            return kaigyoRePlace(sv_model.wednesday);
+        }
+
+        public String kaigyo_thursday()
+        {
+            return kaigyoRePlace(sv_model.thursday);
+        }
+
+        public String kaigyo_friday()
+        {
+            return kaigyoRePlace(sv_model.friday);
+        }
+
+        public String kaigyo_saturday()
+        {
+            return kaigyoRePlace(sv_model.saturday);
+        }
+
         public String kaigyo_lastweek_mondai_gyomu()
         {
             return kaigyoRePlace(st_model.lastweek_mondai_gyomu);
@@ -38,8 +81,7 @@ namespace WeeklyReport.control
             return kaigyoRePlace(st_model.lastweek_result);
         }
 
-
-
+        //改行メソッド
         public String kaigyoRePlace(string setting_Text)
         {
             //改行コードで区切る

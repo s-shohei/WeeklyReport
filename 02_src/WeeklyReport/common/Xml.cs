@@ -56,7 +56,8 @@ namespace WeeklyReport.common
         }
 
         /// <summary>
-        //setting.xml読込み
+        ///週報作成期間内のsave_text.xmlが存在する場合
+        ///読込み
         /// <summary>
         public SaveTextModel text_load()
         {

@@ -68,6 +68,7 @@
     <Compile Include="util\ConboUtil.cs" />
     <Compile Include="util\DayUtil.cs" />
     <Compile Include="util\PathUtil.cs" />
+    <Compile Include="util\XmlLoad.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -46,15 +46,13 @@ namespace WeeklyReport
             // 稼動状況コンボボックスの中身を入れる
             ConboUtil.setKadou(this);
 
-            // TODO ここもXMLを扱うUtilクラスを作ってみてはどうだろうか。
-            // インスタンスを他のクラス含め、多数作るのはよろしくない。
+            // ★TODO ここもXMLを扱うUtilクラスを作ってみてはどうだろうか。
 
-            //前週の週報を読込む
-            Xml read = new Xml();
-            SettingTextModel st_text = read.setting_load();
+            //一時保存の設定ファイルの読み込み
 
-            //読込んだ週報の改行を置換し、フォームにセット
-            KaigyoControl re_text = new KaigyoControl(st_text);
+
+
+
 
             MondaiKaizen_Gyomu.Text = re_text.kaigyo_lastweek_mondai_gyomu();
             MondaiKaizen_Jiko.Text = re_text.kaigyo_lastweek_mondai_jiko();
@@ -84,7 +82,15 @@ namespace WeeklyReport
 
         private void savebotton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("To Be Continue!");
+            // 入力値をモデルにセット
+            InputValueContorol input = new InputValueContorol(this);
+            FormTextModel model = input.getFormText();
+
+            //setting.xmlに書き出す
+            Xml w = new Xml();
+            w.text_write(this);
+
+            MessageBox.Show("一次保存しました。");
         }
 
     }
