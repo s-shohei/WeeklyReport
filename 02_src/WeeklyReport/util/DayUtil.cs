@@ -34,20 +34,5 @@ namespace WeeklyReport.util
 
             return dayModel;
         }
-
-        /// <summary>
-        /// 週の最終日(土)の日付を計算
-        /// </summary>
-        /// <returns>一週間の日付が入ったモデルクラス</returns>
-        public static DateTime getWeekend()
-        {
-            //今日日付の取得
-            DateTime dtToday = DateTime.Today;
-
-            //今日日付を数値化（0~6）し、日曜日付【0】からマイナスする
-            DateTime weekend = dtToday.AddDays(0 - (int)dtToday.DayOfWeek);
-
-            return weekend;
-        }
     }
 }

@@ -16,6 +16,9 @@ namespace WeeklyReport.model
 
     public class SaveTextModel
     {
+        [System.Xml.Serialization.XmlElement("write")]
+        public String write { get; set; }
+
         [System.Xml.Serialization.XmlElement("sunday")]
         public String sunday { get; set; }
 
@@ -30,6 +33,9 @@ namespace WeeklyReport.model
 
         [System.Xml.Serialization.XmlElement("sunday_end_mm")]
         public String sunday_end_mm { get; set; }
+
+        [System.Xml.Serialization.XmlElement("sunday_kadou")]
+        public String sunday_kadou { get; set; }
 
         [System.Xml.Serialization.XmlElement("monday")]
         public String monday { get; set; }
@@ -46,6 +52,9 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("monday_end_mm")]
         public String monday_end_mm { get; set; }
 
+        [System.Xml.Serialization.XmlElement("monday_kadou")]
+        public String monday_kadou { get; set; }
+
         [System.Xml.Serialization.XmlElement("tuesday")]
         public String tuesday { get; set; }
 
@@ -60,6 +69,9 @@ namespace WeeklyReport.model
 
         [System.Xml.Serialization.XmlElement("tuesday_end_mm")]
         public String tuesday_end_mm { get; set; }
+
+        [System.Xml.Serialization.XmlElement("tuesday_kadou")]
+        public String tuesday_kadou { get; set; }
 
         [System.Xml.Serialization.XmlElement("wednesday")]
         public String wednesday { get; set; }
@@ -76,6 +88,9 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("wednesday_end_mm")]
         public String wednesday_end_mm { get; set; }
 
+        [System.Xml.Serialization.XmlElement("wednesday_kadou")]
+        public String wednesday_kadou { get; set; }
+
         [System.Xml.Serialization.XmlElement("thursday")]
         public String thursday { get; set; }
 
@@ -90,6 +105,9 @@ namespace WeeklyReport.model
 
         [System.Xml.Serialization.XmlElement("thursday_end_mm")]
         public String thursday_end_mm { get; set; }
+
+        [System.Xml.Serialization.XmlElement("thursday_kadou")]
+        public String thursday_kadou { get; set; }
 
         [System.Xml.Serialization.XmlElement("friday")]
         public String friday { get; set; }
@@ -106,6 +124,9 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("friday_end_mm")]
         public String friday_end_mm { get; set; }
 
+        [System.Xml.Serialization.XmlElement("friday_kadou")]
+        public String friday_kadou { get; set; }
+
         [System.Xml.Serialization.XmlElement("saturday")]
         public String saturday { get; set; }
 
@@ -120,6 +141,9 @@ namespace WeeklyReport.model
 
         [System.Xml.Serialization.XmlElement("saturday_end_mm")]
         public String saturday_end_mm { get; set; }
+
+        [System.Xml.Serialization.XmlElement("saturday_kadou")]
+        public String saturday_kadou { get; set; }
 
     }
 }

@@ -40,8 +40,8 @@ namespace WeeklyReport.common
 
             model = setting_load();
             model.lastweek_mondai_gyomu = f.MondaiKaizen_Gyomu.Text;
-            model.lastweek_mondai_jiko = f.MondaiKaizen_Jiko.Text;
-            model.lastweek_result = f.Result.Text;
+            model.lastweek_mondai_jiko  = f.MondaiKaizen_Jiko.Text;
+            model.lastweek_result       = f.Result.Text;
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SettingTextModel));
 
@@ -56,12 +56,11 @@ namespace WeeklyReport.common
         }
 
         /// <summary>
-        ///週報作成期間内のsave_text.xmlが存在する場合
-        ///読込み
+        ///save_text.xmlの読み込み
         /// <summary>
         public SaveTextModel text_load()
         {
-            System.IO.FileStream fs = new System.IO.FileStream(PathUtil.setting_file_location(), System.IO.FileMode.Open);
+            System.IO.FileStream fs = new System.IO.FileStream(PathUtil.save_text_file_location(), System.IO.FileMode.Open);
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SaveTextModel));
 
@@ -73,7 +72,7 @@ namespace WeeklyReport.common
         }
 
         /// <summary>
-        /// setting.xml書き込み
+        /// save_text.xml書き込み
         /// </summary>
         public void text_write(Form1 f)
         {
@@ -82,58 +81,68 @@ namespace WeeklyReport.common
 
             model = text_load();
 
+            //ファイル更新日付取得、保持
+            model.write = DateTime.Today.ToString().Substring(0, 10);
+
             //日曜の内容を保持
-            model.sunday = f.naiyou1.Text;
+            model.sunday          = f.work1.Text;
             model.sunday_start_hh = f.StartHH1.Text;
             model.sunday_start_mm = f.StartMM1.Text;
-            model.sunday_end_hh = f.EndHH1.Text;
-            model.sunday_end_mm = f.EndMM1.Text;
+            model.sunday_end_hh   = f.EndHH1.Text;
+            model.sunday_end_mm   = f.EndMM1.Text;
+            model.sunday_kadou    = f.Kadou1.Text;
 
             //月曜の内容を保持
-            model.monday = f.naiyou2.Text;
+            model.monday          = f.work2.Text;
             model.monday_start_hh = f.StartHH2.Text;
             model.monday_start_mm = f.StartMM2.Text;
-            model.monday_end_hh = f.EndHH2.Text;
-            model.monday_end_mm = f.EndMM2.Text;
+            model.monday_end_hh   = f.EndHH2.Text;
+            model.monday_end_mm   = f.EndMM2.Text;
+            model.monday_kadou    = f.Kadou2.Text;
 
             //火曜の内容を保持
-            model.tuesday = f.naiyou3.Text;
+            model.tuesday          = f.work3.Text;
             model.tuesday_start_hh = f.StartHH3.Text;
             model.tuesday_start_mm = f.StartMM3.Text;
-            model.tuesday_end_hh = f.EndHH3.Text;
-            model.tuesday_end_mm = f.EndMM3.Text;
+            model.tuesday_end_hh   = f.EndHH3.Text;
+            model.tuesday_end_mm   = f.EndMM3.Text;
+            model.tuesday_kadou    = f.Kadou3.Text;
 
             //水曜の内容を保持
-            model.wednesday = f.naiyou4.Text;
+            model.wednesday          = f.work4.Text;
             model.wednesday_start_hh = f.StartHH4.Text;
             model.wednesday_start_mm = f.StartMM4.Text;
-            model.wednesday_end_hh = f.EndHH4.Text;
-            model.wednesday_end_mm = f.EndMM4.Text;
+            model.wednesday_end_hh   = f.EndHH4.Text;
+            model.wednesday_end_mm   = f.EndMM4.Text;
+            model.wednesday_kadou    = f.Kadou4.Text;
 
             //木曜の内容を保持
-            model.thursday = f.naiyou5.Text;
+            model.thursday          = f.work5.Text;
             model.thursday_start_hh = f.StartHH5.Text;
             model.thursday_start_mm = f.StartMM5.Text;
-            model.thursday_end_hh = f.EndHH5.Text;
-            model.thursday_end_mm = f.EndMM5.Text;
+            model.thursday_end_hh   = f.EndHH5.Text;
+            model.thursday_end_mm   = f.EndMM5.Text;
+            model.thursday_kadou    = f.Kadou5.Text;
 
             //金曜の内容を保持
-            model.friday = f.naiyou6.Text;
+            model.friday          = f.work6.Text;
             model.friday_start_hh = f.StartHH6.Text;
             model.friday_start_mm = f.StartMM6.Text;
-            model.friday_end_hh = f.EndHH6.Text;
-            model.friday_end_mm = f.EndMM6.Text;
+            model.friday_end_hh   = f.EndHH6.Text;
+            model.friday_end_mm   = f.EndMM6.Text;
+            model.friday_kadou    = f.Kadou6.Text;
 
             //土曜の内容を保持
-            model.saturday = f.naiyou7.Text;
+            model.saturday          = f.work7.Text;
             model.saturday_start_hh = f.StartHH7.Text;
             model.saturday_start_mm = f.StartMM7.Text;
-            model.saturday_end_hh = f.EndHH7.Text;
-            model.saturday_end_mm = f.EndMM7.Text;
+            model.saturday_end_hh   = f.EndHH7.Text;
+            model.saturday_end_mm   = f.EndMM7.Text;
+            model.saturday_kadou    = f.Kadou7.Text;
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SaveTextModel));
 
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.setting_file_location(), false, new System.Text.UTF8Encoding(false));
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.save_text_file_location(), false, new System.Text.UTF8Encoding(false));
 
             //シリアル化し、XMLファイルに保存する
             serializer.Serialize(sw, model);

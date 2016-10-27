@@ -28,7 +28,7 @@ namespace WeeklyReport.util
         // save_text.xmlのファイルパスを返す
         public static string save_text_file_location()
         {
-            string appPath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "setting.xml";
+            string appPath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "save_text.xml";
             return appPath;
         }
 
