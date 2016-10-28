@@ -20,7 +20,9 @@ namespace WeeklyReport
     {
         //インスタンス
         Xml read = new Xml();
-        
+        SettingTextModel st_text = new SettingTextModel();
+        SaveTextModel sv_text    = new SaveTextModel();
+
         //日付計算結果を取得
         DayModel day = DayUtil.getWeekDays();
 
@@ -95,7 +97,7 @@ namespace WeeklyReport
             w.text_write(this);
             w.setting_write(this);
 
-            MessageBox.Show("一次保存しました。");
+            MessageBox.Show("保存しました。");
         }
 
         //一時保存ファイルの日付有効チェック
