@@ -140,6 +140,10 @@ namespace WeeklyReport.common
             model.saturday_end_mm   = f.EndMM7.Text;
             model.saturday_kadou    = f.Kadou7.Text;
 
+            // 今週の言いたいことを保持
+            model.saying_gyoumugai = f.Play.Text;
+            model.saying_gyoumunai = f.business.Text;
+            
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SaveTextModel));
 
             System.IO.StreamWriter sw = new System.IO.StreamWriter(PathUtil.save_text_file_location(), false, new System.Text.UTF8Encoding(false));

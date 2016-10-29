@@ -31,5 +31,11 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("lastweek_result")]
         public String lastweek_result { get; set; }
 
+        [System.Xml.Serialization.XmlElement("kadoutei")]
+        public String kadou_tei_value { get; set; }
+
+        [System.Xml.Serialization.XmlElement("kadouchu")]
+        public String kadou_chu_value { get; set; }
+
     }
 }

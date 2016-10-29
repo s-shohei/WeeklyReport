@@ -34,5 +34,22 @@ namespace WeeklyReport.util
 
             return dayModel;
         }
+
+        public static DayModel getWeekDaysAddYoubi()
+        {
+            // 返却値
+            DayModel model = getWeekDays();
+
+            // 曜日を追加
+            model.dtSunday = model.dtSunday + "　（日）";
+            model.dtMonday = model.dtMonday + "　（月）";
+            model.dtTuesday = model.dtTuesday + "　（火）";
+            model.dtWednesday = model.dtWednesday + "　（水）";
+            model.dtThursday = model.dtThursday + "　（木）";
+            model.dtFriday = model.dtFriday + "　（金）";
+            model.dtSaturday = model.dtSaturday + "　（土）";
+
+            return model;
+        }
     }
 }

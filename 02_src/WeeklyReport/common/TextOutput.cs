@@ -67,7 +67,7 @@ namespace WeeklyReport.common
 
             // TODO とてもカオスですね(ToT)/~~~なんとかしましょう。
             sb.Append("■作業内容\r\n");
-            if (ft_model.kadou1 != KadouConst.dayoff)
+            if (ft_model.kadou1 != KadouConst.dayoff && ft_model.kadou1 != KadouConst.sickday && ft_model.kadou1 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.startHH1 + ":" + ft_model.startMM1 + "-" + ft_model.endHH1 + ":" + ft_model.endMM1 + "  " + ft_model.kadou1 + "\r\n");
                 sb.Append(ft_model.work1 + "\r\n\r\n");
@@ -77,7 +77,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtSunday.ToString().Substring(0, 10) + "（日）" + "  " + ft_model.kadou1 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou2 != KadouConst.dayoff)
+            if (ft_model.kadou2 != KadouConst.dayoff && ft_model.kadou2 != KadouConst.sickday && ft_model.kadou2 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.startHH2 + ":" + ft_model.startMM2 + "-" + ft_model.endHH2 + ":" + ft_model.endMM2 + "  " + ft_model.kadou2 + "\r\n");
                 sb.Append(ft_model.work2 + "\r\n\r\n");
@@ -87,7 +87,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtMonday.ToString().Substring(0, 10) + "（月）" + "  " + ft_model.kadou2 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou3 != KadouConst.dayoff)
+            if (ft_model.kadou3 != KadouConst.dayoff && ft_model.kadou3 != KadouConst.sickday && ft_model.kadou3 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.startHH3 + ":" + ft_model.startMM3 + "-" + ft_model.endHH3 + ":" + ft_model.endMM3 + "  " + ft_model.kadou3 + "\r\n");
                 sb.Append(ft_model.work3 + "\r\n\r\n");
@@ -97,7 +97,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtTuesday.ToString().Substring(0, 10) + "（火）" + "  " + ft_model.kadou3 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou4 != KadouConst.dayoff)
+            if (ft_model.kadou4 != KadouConst.dayoff && ft_model.kadou4 != KadouConst.sickday && ft_model.kadou4 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.startHH4 + ":" + ft_model.startMM4 + "-" + ft_model.endHH4 + ":" + ft_model.endMM4 + "  " + ft_model.kadou4 + "\r\n");
                 sb.Append(ft_model.work4 + "\r\n\r\n");
@@ -107,7 +107,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtWednesday.ToString().Substring(0, 10) + "（水）" + "  " + ft_model.kadou4 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou5 != KadouConst.dayoff)
+            if (ft_model.kadou5 != KadouConst.dayoff && ft_model.kadou5 != KadouConst.sickday && ft_model.kadou5 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.startHH5 + ":" + ft_model.startMM5 + "-" + ft_model.endHH5 + ":" + ft_model.endMM5 + "  " + ft_model.kadou5 + "\r\n");
                 sb.Append(ft_model.work5 + "\r\n\r\n");
@@ -117,7 +117,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtThursday.ToString().Substring(0, 10) + "（木）" + "  " + ft_model.kadou5 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou6 != KadouConst.dayoff)
+            if (ft_model.kadou6 != KadouConst.dayoff && ft_model.kadou6 != KadouConst.sickday && ft_model.kadou6 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.startHH6 + ":" + ft_model.startMM6 + "-" + ft_model.endHH6 + ":" + ft_model.endMM6 + "  " + ft_model.kadou6 + "\r\n");
                 sb.Append(ft_model.work6 + "\r\n\r\n");
@@ -127,7 +127,7 @@ namespace WeeklyReport.common
                 sb.Append(day.dtFriday.ToString().Substring(0, 10) + "（金）" + "  " + ft_model.kadou6 + "\r\n\r\n");
             }
 
-            if (ft_model.kadou7 != KadouConst.dayoff)
+            if (ft_model.kadou7 != KadouConst.dayoff && ft_model.kadou7 != KadouConst.sickday && ft_model.kadou7 != KadouConst.paidholiday)
             {
                 sb.Append(day.dtSaturday.ToString().Substring(0, 10) + "（土）" + "  " + ft_model.startHH7 + ":" + ft_model.startMM7 + "-" + ft_model.endHH7 + ":" + ft_model.endMM7 + "  " + ft_model.kadou7 + "\r\n");
                 sb.Append(ft_model.work7 + "\r\n\r\n");

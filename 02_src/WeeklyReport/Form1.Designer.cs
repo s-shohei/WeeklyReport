@@ -119,6 +119,13 @@
             this.MondaiKaizen_Gyomu = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.RunningTimeSun = new System.Windows.Forms.Label();
+            this.RunningTimeMon = new System.Windows.Forms.Label();
+            this.RunningTimeTue = new System.Windows.Forms.Label();
+            this.RunningTimeWed = new System.Windows.Forms.Label();
+            this.RunningTimeThurs = new System.Windows.Forms.Label();
+            this.RunningTimeFri = new System.Windows.Forms.Label();
+            this.RunningTimeSat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartHH1
@@ -128,6 +135,7 @@
             this.StartHH1.Size = new System.Drawing.Size(23, 19);
             this.StartHH1.TabIndex = 0;
             this.StartHH1.Text = "09";
+            this.StartHH1.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // SundayLabel
             // 
@@ -262,6 +270,7 @@
             this.EndHH1.Size = new System.Drawing.Size(23, 19);
             this.EndHH1.TabIndex = 2;
             this.EndHH1.Text = "18";
+            this.EndHH1.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // work1
             // 
@@ -334,6 +343,7 @@
             this.StartMM1.Name = "StartMM1";
             this.StartMM1.Size = new System.Drawing.Size(47, 20);
             this.StartMM1.TabIndex = 1;
+            this.StartMM1.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndMM1
             // 
@@ -342,6 +352,7 @@
             this.EndMM1.Name = "EndMM1";
             this.EndMM1.Size = new System.Drawing.Size(47, 20);
             this.EndMM1.TabIndex = 3;
+            this.EndMM1.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou1
             // 
@@ -366,6 +377,7 @@
             this.EndMM2.Name = "EndMM2";
             this.EndMM2.Size = new System.Drawing.Size(47, 20);
             this.EndMM2.TabIndex = 9;
+            this.EndMM2.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM2
             // 
@@ -374,6 +386,7 @@
             this.StartMM2.Name = "StartMM2";
             this.StartMM2.Size = new System.Drawing.Size(47, 20);
             this.StartMM2.TabIndex = 7;
+            this.StartMM2.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH2
             // 
@@ -382,6 +395,7 @@
             this.EndHH2.Size = new System.Drawing.Size(23, 19);
             this.EndHH2.TabIndex = 8;
             this.EndHH2.Text = "18";
+            this.EndHH2.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH2
             // 
@@ -390,6 +404,7 @@
             this.StartHH2.Size = new System.Drawing.Size(23, 19);
             this.StartHH2.TabIndex = 6;
             this.StartHH2.Text = "09";
+            this.StartHH2.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou3
             // 
@@ -406,6 +421,7 @@
             this.EndMM3.Name = "EndMM3";
             this.EndMM3.Size = new System.Drawing.Size(47, 20);
             this.EndMM3.TabIndex = 15;
+            this.EndMM3.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM3
             // 
@@ -414,6 +430,7 @@
             this.StartMM3.Name = "StartMM3";
             this.StartMM3.Size = new System.Drawing.Size(47, 20);
             this.StartMM3.TabIndex = 13;
+            this.StartMM3.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH3
             // 
@@ -422,6 +439,7 @@
             this.EndHH3.Size = new System.Drawing.Size(23, 19);
             this.EndHH3.TabIndex = 14;
             this.EndHH3.Text = "18";
+            this.EndHH3.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH3
             // 
@@ -430,6 +448,7 @@
             this.StartHH3.Size = new System.Drawing.Size(23, 19);
             this.StartHH3.TabIndex = 12;
             this.StartHH3.Text = "09";
+            this.StartHH3.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou4
             // 
@@ -446,6 +465,7 @@
             this.EndMM4.Name = "EndMM4";
             this.EndMM4.Size = new System.Drawing.Size(47, 20);
             this.EndMM4.TabIndex = 21;
+            this.EndMM4.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM4
             // 
@@ -455,6 +475,7 @@
             this.StartMM4.Name = "StartMM4";
             this.StartMM4.Size = new System.Drawing.Size(47, 20);
             this.StartMM4.TabIndex = 19;
+            this.StartMM4.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH4
             // 
@@ -463,6 +484,7 @@
             this.EndHH4.Size = new System.Drawing.Size(23, 19);
             this.EndHH4.TabIndex = 20;
             this.EndHH4.Text = "18";
+            this.EndHH4.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH4
             // 
@@ -471,6 +493,7 @@
             this.StartHH4.Size = new System.Drawing.Size(23, 19);
             this.StartHH4.TabIndex = 18;
             this.StartHH4.Text = "09";
+            this.StartHH4.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou5
             // 
@@ -487,6 +510,7 @@
             this.EndMM5.Name = "EndMM5";
             this.EndMM5.Size = new System.Drawing.Size(47, 20);
             this.EndMM5.TabIndex = 27;
+            this.EndMM5.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM5
             // 
@@ -495,6 +519,7 @@
             this.StartMM5.Name = "StartMM5";
             this.StartMM5.Size = new System.Drawing.Size(47, 20);
             this.StartMM5.TabIndex = 25;
+            this.StartMM5.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH5
             // 
@@ -503,6 +528,7 @@
             this.EndHH5.Size = new System.Drawing.Size(23, 19);
             this.EndHH5.TabIndex = 26;
             this.EndHH5.Text = "18";
+            this.EndHH5.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH5
             // 
@@ -511,6 +537,7 @@
             this.StartHH5.Size = new System.Drawing.Size(23, 19);
             this.StartHH5.TabIndex = 24;
             this.StartHH5.Text = "09";
+            this.StartHH5.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou6
             // 
@@ -527,6 +554,7 @@
             this.EndMM6.Name = "EndMM6";
             this.EndMM6.Size = new System.Drawing.Size(47, 20);
             this.EndMM6.TabIndex = 33;
+            this.EndMM6.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM6
             // 
@@ -535,6 +563,7 @@
             this.StartMM6.Name = "StartMM6";
             this.StartMM6.Size = new System.Drawing.Size(47, 20);
             this.StartMM6.TabIndex = 31;
+            this.StartMM6.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH6
             // 
@@ -543,6 +572,7 @@
             this.EndHH6.Size = new System.Drawing.Size(23, 19);
             this.EndHH6.TabIndex = 32;
             this.EndHH6.Text = "18";
+            this.EndHH6.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH6
             // 
@@ -551,6 +581,7 @@
             this.StartHH6.Size = new System.Drawing.Size(23, 19);
             this.StartHH6.TabIndex = 30;
             this.StartHH6.Text = "09";
+            this.StartHH6.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // Kadou7
             // 
@@ -567,6 +598,7 @@
             this.EndMM7.Name = "EndMM7";
             this.EndMM7.Size = new System.Drawing.Size(47, 20);
             this.EndMM7.TabIndex = 39;
+            this.EndMM7.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // StartMM7
             // 
@@ -575,6 +607,7 @@
             this.StartMM7.Name = "StartMM7";
             this.StartMM7.Size = new System.Drawing.Size(47, 20);
             this.StartMM7.TabIndex = 37;
+            this.StartMM7.SelectionChangeCommitted += new System.EventHandler(this.selectItemChange);
             // 
             // EndHH7
             // 
@@ -583,6 +616,7 @@
             this.EndHH7.Size = new System.Drawing.Size(23, 19);
             this.EndHH7.TabIndex = 38;
             this.EndHH7.Text = "18";
+            this.EndHH7.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // StartHH7
             // 
@@ -591,6 +625,7 @@
             this.StartHH7.Size = new System.Drawing.Size(23, 19);
             this.StartHH7.TabIndex = 36;
             this.StartHH7.Text = "09";
+            this.StartHH7.Leave += new System.EventHandler(this.selectItemChange);
             // 
             // label1
             // 
@@ -845,6 +880,7 @@
             this.Result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.Result.Size = new System.Drawing.Size(582, 194);
             this.Result.TabIndex = 44;
+            this.Result.TextChanged += new System.EventHandler(this.selectItemChange);
             // 
             // MondaiKaizen_Jiko
             // 
@@ -909,12 +945,75 @@
             this.label28.TabIndex = 138;
             this.label28.Text = "＜自己＞";
             // 
+            // RunningTimeSun
+            // 
+            this.RunningTimeSun.AutoSize = true;
+            this.RunningTimeSun.Location = new System.Drawing.Point(464, 15);
+            this.RunningTimeSun.Name = "RunningTimeSun";
+            this.RunningTimeSun.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeSun.TabIndex = 139;
+            // 
+            // RunningTimeMon
+            // 
+            this.RunningTimeMon.AutoSize = true;
+            this.RunningTimeMon.Location = new System.Drawing.Point(464, 123);
+            this.RunningTimeMon.Name = "RunningTimeMon";
+            this.RunningTimeMon.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeMon.TabIndex = 140;
+            // 
+            // RunningTimeTue
+            // 
+            this.RunningTimeTue.AutoSize = true;
+            this.RunningTimeTue.Location = new System.Drawing.Point(464, 231);
+            this.RunningTimeTue.Name = "RunningTimeTue";
+            this.RunningTimeTue.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeTue.TabIndex = 141;
+            // 
+            // RunningTimeWed
+            // 
+            this.RunningTimeWed.AutoSize = true;
+            this.RunningTimeWed.Location = new System.Drawing.Point(464, 344);
+            this.RunningTimeWed.Name = "RunningTimeWed";
+            this.RunningTimeWed.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeWed.TabIndex = 142;
+            // 
+            // RunningTimeThurs
+            // 
+            this.RunningTimeThurs.AutoSize = true;
+            this.RunningTimeThurs.Location = new System.Drawing.Point(464, 453);
+            this.RunningTimeThurs.Name = "RunningTimeThurs";
+            this.RunningTimeThurs.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeThurs.TabIndex = 143;
+            // 
+            // RunningTimeFri
+            // 
+            this.RunningTimeFri.AutoSize = true;
+            this.RunningTimeFri.Location = new System.Drawing.Point(464, 563);
+            this.RunningTimeFri.Name = "RunningTimeFri";
+            this.RunningTimeFri.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeFri.TabIndex = 144;
+            // 
+            // RunningTimeSat
+            // 
+            this.RunningTimeSat.AutoSize = true;
+            this.RunningTimeSat.Location = new System.Drawing.Point(464, 673);
+            this.RunningTimeSat.Name = "RunningTimeSat";
+            this.RunningTimeSat.Size = new System.Drawing.Size(0, 12);
+            this.RunningTimeSat.TabIndex = 145;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1241, 827);
+            this.Controls.Add(this.RunningTimeSat);
+            this.Controls.Add(this.RunningTimeFri);
+            this.Controls.Add(this.RunningTimeThurs);
+            this.Controls.Add(this.RunningTimeWed);
+            this.Controls.Add(this.RunningTimeTue);
+            this.Controls.Add(this.RunningTimeMon);
+            this.Controls.Add(this.RunningTimeSun);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.MondaiKaizen_Gyomu);
@@ -1107,6 +1206,13 @@
         internal System.Windows.Forms.TextBox MondaiKaizen_Gyomu;
         internal System.Windows.Forms.Label label27;
         internal System.Windows.Forms.Label label28;
+        internal System.Windows.Forms.Label RunningTimeSun;
+        internal System.Windows.Forms.Label RunningTimeMon;
+        internal System.Windows.Forms.Label RunningTimeTue;
+        internal System.Windows.Forms.Label RunningTimeWed;
+        internal System.Windows.Forms.Label RunningTimeThurs;
+        internal System.Windows.Forms.Label RunningTimeFri;
+        internal System.Windows.Forms.Label RunningTimeSat;
     }
 }
 

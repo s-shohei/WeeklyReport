@@ -33,56 +33,56 @@ namespace WeeklyReport.control
 
         public String kaigyo_sunday()
         {
-            return sv_KaigyoRePlace(sv_model.sunday);
+            return kaigyoReplace(sv_model.sunday);
         }
 
         public String kaigyo_monday()
         {
-            return sv_KaigyoRePlace(sv_model.monday);
+            return kaigyoReplace(sv_model.monday);
         }
 
         public String kaigyo_tuesday()
         {
-            return sv_KaigyoRePlace(sv_model.tuesday);
+            return kaigyoReplace(sv_model.tuesday);
         }
 
         public String kaigyo_wednesday()
         {
-            return sv_KaigyoRePlace(sv_model.wednesday);
+            return kaigyoReplace(sv_model.wednesday);
         }
 
         public String kaigyo_thursday()
         {
-            return sv_KaigyoRePlace(sv_model.thursday);
+            return kaigyoReplace(sv_model.thursday);
         }
 
         public String kaigyo_friday()
         {
-            return sv_KaigyoRePlace(sv_model.friday);
+            return kaigyoReplace(sv_model.friday);
         }
 
         public String kaigyo_saturday()
         {
-            return sv_KaigyoRePlace(sv_model.saturday);
+            return kaigyoReplace(sv_model.saturday);
         }
 
         public String kaigyo_lastweek_mondai_gyomu()
         {
-            return st_KaigyoRePlace(st_model.lastweek_mondai_gyomu);
+            return kaigyoReplace(st_model.lastweek_mondai_gyomu);
         }
 
         public String kaigyo_lastweek_mondai_jiko()
         {
-            return st_KaigyoRePlace(st_model.lastweek_mondai_jiko);
+            return kaigyoReplace(st_model.lastweek_mondai_jiko);
         }
 
         public String kaigyo_lastweek_result()
         {
-            return st_KaigyoRePlace(st_model.lastweek_result);
+            return kaigyoReplace(st_model.lastweek_result);
         }
 
         //改行メソッド
-        public String st_KaigyoRePlace(string setting_Text)
+        public String kaigyoReplace(string setting_Text)
         {
             //改行コードで区切る
             string[] new_text = setting_Text.Split('\n');
@@ -96,22 +96,6 @@ namespace WeeklyReport.control
             return sb.ToString();
             
         }
-
-        public String sv_KaigyoRePlace(string save_Text)
-        {
-            //改行コードで区切る
-            string[] new_text = save_Text.Split('\n');
-
-            StringBuilder sb = new StringBuilder();
-            foreach (string item in new_text)
-            {
-                sb.Append(item + "\r\n");
-            }
-
-            return sb.ToString();
-
-        }
-
     }
     
 }

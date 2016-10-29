@@ -53,6 +53,7 @@
     <Compile Include="consts\TimeConst.cs" />
     <Compile Include="control\KaigyoControl.cs" />
     <Compile Include="control\InputValueContorol.cs" />
+    <Compile Include="control\RunningTimeControl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,7 @@
     <Compile Include="util\ConboUtil.cs" />
     <Compile Include="util\DayUtil.cs" />
     <Compile Include="util\PathUtil.cs" />
+    <Compile Include="util\RunningTimeUtil.cs" />
     <Compile Include="util\XmlLoadUtil.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

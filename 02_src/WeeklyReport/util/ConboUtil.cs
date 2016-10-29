@@ -77,6 +77,7 @@ namespace WeeklyReport.util
             c.Items.Add(KadouConst.kadoumax);
             c.Items.Add(KadouConst.dayoff);
             c.Items.Add(KadouConst.specialholiday);
+            c.Items.Add(KadouConst.paidholiday);
             c.Items.Add(KadouConst.sickday);
 
             //コンボボックスにテキスト入力させない設定

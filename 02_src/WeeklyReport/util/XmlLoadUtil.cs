@@ -14,28 +14,25 @@ namespace WeeklyReport.util
     class XmlLoadUtil
     {
         /// <summary>
-        /// 前週の週報を読み込み
+        /// setting.xmlを読み込みモデルを返却
         /// </summary>
-        public static void settingXmlLoad()
+        public static SettingTextModel settingXmlLoad()
         {
             Xml read = new Xml();
-           SettingTextModel st_text = read.setting_load();
-
-            //読込んだ週報の改行を置換
-            KaigyoControl re_st_text = new KaigyoControl(st_text);
+            return read.setting_load();
         }
 
-        /// <summary>
-        /// 一時保存の内容を読み込み
-        /// </summary>
-        public static void saveXmlLoad()
+        // 一時保存のテキストが空の場合、デフォルトの値を設定
+        public static string defaultValueCheck(string tagetString, string changeString)
         {
-            Xml read = new Xml();
-            SaveTextModel sv_text = read.text_load();
+            string result = changeString;
 
-            //読込んだ週報の改行を置換
-            KaigyoControl re_sv_text = new KaigyoControl(sv_text);
+            if(String.IsNullOrEmpty(changeString))
+            {
+                result = tagetString;
+            }
+
+            return result;
         }
-
     }
 }
