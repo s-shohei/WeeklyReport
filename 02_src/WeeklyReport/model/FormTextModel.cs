@@ -59,7 +59,8 @@ namespace WeeklyReport.model
         public string mondaiKaizen_gyomu { get; set; }
         public string mondaiKaizen_jiko { get; set; }
 
-        public string result { get; set; }
+        public string result_gyomu { get; set; }
+        public string result_jiko { get; set; }
 
         public string business { get; set; }
 

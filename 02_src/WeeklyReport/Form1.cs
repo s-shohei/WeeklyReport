@@ -74,7 +74,8 @@ namespace WeeklyReport
 
                 MondaiKaizen_Gyomu.Text = re_st_text.kaigyo_lastweek_mondai_gyomu();
                 MondaiKaizen_Jiko.Text = re_st_text.kaigyo_lastweek_mondai_jiko();
-                Result.Text = re_st_text.kaigyo_lastweek_result();
+                Result_Gyomu.Text = re_st_text.kaigyo_lastweek_result_gyomu();
+                Result_Jiko.Text = re_st_text.kaigyo_lastweek_result_jiko();
             }
             catch(IOException iex)
             {
@@ -220,6 +221,12 @@ namespace WeeklyReport
             EndMM7.Text = XmlLoadUtil.defaultValueCheck(EndMM7.Text, sv_text_model.saturday_end_mm);
             Kadou7.Text = XmlLoadUtil.defaultValueCheck(Kadou7.Text, sv_text_model.saturday_kadou);
             work7.Text = XmlLoadUtil.defaultValueCheck(work7.Text, re_sv_text.kaigyo_saturday());
+
+            MondaiKaizen_Gyomu.Text = XmlLoadUtil.defaultValueCheck(MondaiKaizen_Gyomu.Text, sv_text_model.mondaikaizen_gyomu);
+            MondaiKaizen_Jiko.Text  = XmlLoadUtil.defaultValueCheck(MondaiKaizen_Jiko.Text, sv_text_model.mondaikaizen_jiko);
+
+            Result_Gyomu.Text = XmlLoadUtil.defaultValueCheck(Result_Gyomu.Text, sv_text_model.result_gyomu);
+            Result_Jiko.Text  = XmlLoadUtil.defaultValueCheck(Result_Jiko.Text, sv_text_model.result_jiko);
 
             Play.Text = XmlLoadUtil.defaultValueCheck(Play.Text, sv_text_model.saying_gyoumugai);
             business.Text = XmlLoadUtil.defaultValueCheck(business.Text, sv_text_model.saying_gyoumunai);

@@ -111,7 +111,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.business = new System.Windows.Forms.TextBox();
-            this.Result = new System.Windows.Forms.TextBox();
+            this.Result_Jiko = new System.Windows.Forms.TextBox();
             this.MondaiKaizen_Jiko = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -126,6 +126,9 @@
             this.RunningTimeThurs = new System.Windows.Forms.Label();
             this.RunningTimeFri = new System.Windows.Forms.Label();
             this.RunningTimeSat = new System.Windows.Forms.Label();
+            this.Result_Gyomu = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartHH1
@@ -759,8 +762,8 @@
             this.naiyou1.Location = new System.Drawing.Point(13, 31);
             this.naiyou1.Name = "naiyou1";
             this.naiyou1.Size = new System.Drawing.Size(53, 12);
-            this.naiyou1.TabIndex = 129;
-            this.naiyou1.Text = "実施内容";
+            this.naiyou1.TabIndex = 148;
+            this.naiyou1.Text = "作業内容";
             // 
             // naiyou2
             // 
@@ -768,8 +771,8 @@
             this.naiyou2.Location = new System.Drawing.Point(13, 143);
             this.naiyou2.Name = "naiyou2";
             this.naiyou2.Size = new System.Drawing.Size(53, 12);
-            this.naiyou2.TabIndex = 130;
-            this.naiyou2.Text = "実施内容";
+            this.naiyou2.TabIndex = 149;
+            this.naiyou2.Text = "作業内容";
             // 
             // naiyou3
             // 
@@ -777,8 +780,8 @@
             this.naiyou3.Location = new System.Drawing.Point(13, 254);
             this.naiyou3.Name = "naiyou3";
             this.naiyou3.Size = new System.Drawing.Size(53, 12);
-            this.naiyou3.TabIndex = 131;
-            this.naiyou3.Text = "実施内容";
+            this.naiyou3.TabIndex = 150;
+            this.naiyou3.Text = "作業内容";
             // 
             // naiyou4
             // 
@@ -786,8 +789,8 @@
             this.naiyou4.Location = new System.Drawing.Point(13, 364);
             this.naiyou4.Name = "naiyou4";
             this.naiyou4.Size = new System.Drawing.Size(53, 12);
-            this.naiyou4.TabIndex = 132;
-            this.naiyou4.Text = "実施内容";
+            this.naiyou4.TabIndex = 151;
+            this.naiyou4.Text = "作業内容";
             // 
             // naiyou5
             // 
@@ -795,8 +798,8 @@
             this.naiyou5.Location = new System.Drawing.Point(13, 475);
             this.naiyou5.Name = "naiyou5";
             this.naiyou5.Size = new System.Drawing.Size(53, 12);
-            this.naiyou5.TabIndex = 133;
-            this.naiyou5.Text = "実施内容";
+            this.naiyou5.TabIndex = 152;
+            this.naiyou5.Text = "作業内容";
             // 
             // naiyou6
             // 
@@ -804,8 +807,8 @@
             this.naiyou6.Location = new System.Drawing.Point(15, 585);
             this.naiyou6.Name = "naiyou6";
             this.naiyou6.Size = new System.Drawing.Size(53, 12);
-            this.naiyou6.TabIndex = 134;
-            this.naiyou6.Text = "実施内容";
+            this.naiyou6.TabIndex = 153;
+            this.naiyou6.Text = "作業内容";
             // 
             // naiyou7
             // 
@@ -813,15 +816,15 @@
             this.naiyou7.Location = new System.Drawing.Point(13, 691);
             this.naiyou7.Name = "naiyou7";
             this.naiyou7.Size = new System.Drawing.Size(53, 12);
-            this.naiyou7.TabIndex = 135;
-            this.naiyou7.Text = "実施内容";
+            this.naiyou7.TabIndex = 154;
+            this.naiyou7.Text = "作業内容";
             // 
             // savebotton
             // 
             this.savebotton.Location = new System.Drawing.Point(963, 785);
             this.savebotton.Name = "savebotton";
             this.savebotton.Size = new System.Drawing.Size(120, 26);
-            this.savebotton.TabIndex = 46;
+            this.savebotton.TabIndex = 48;
             this.savebotton.Text = "一時保存";
             this.savebotton.UseVisualStyleBackColor = true;
             this.savebotton.Click += new System.EventHandler(this.savebotton_Click);
@@ -831,118 +834,118 @@
             this.textbotton.Location = new System.Drawing.Point(1089, 785);
             this.textbotton.Name = "textbotton";
             this.textbotton.Size = new System.Drawing.Size(120, 26);
-            this.textbotton.TabIndex = 47;
+            this.textbotton.TabIndex = 49;
             this.textbotton.Text = "テキスト出力";
             this.textbotton.UseVisualStyleBackColor = true;
             this.textbotton.Click += new System.EventHandler(this.textbotton_Click);
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(625, 661);
+            this.Play.Location = new System.Drawing.Point(625, 673);
             this.Play.Multiline = true;
             this.Play.Name = "Play";
             this.Play.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Play.Size = new System.Drawing.Size(580, 110);
-            this.Play.TabIndex = 46;
+            this.Play.Size = new System.Drawing.Size(582, 95);
+            this.Play.TabIndex = 47;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(625, 646);
+            this.label19.Location = new System.Drawing.Point(625, 658);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(65, 12);
-            this.label19.TabIndex = 135;
+            this.label19.TabIndex = 147;
             this.label19.Text = "＜業務外＞";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(625, 515);
+            this.label18.Location = new System.Drawing.Point(625, 540);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(65, 12);
-            this.label18.TabIndex = 134;
+            this.label18.TabIndex = 146;
             this.label18.Text = "＜業務内＞";
             // 
             // business
             // 
-            this.business.Location = new System.Drawing.Point(625, 530);
+            this.business.Location = new System.Drawing.Point(625, 555);
             this.business.Multiline = true;
             this.business.Name = "business";
             this.business.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.business.Size = new System.Drawing.Size(580, 110);
-            this.business.TabIndex = 45;
+            this.business.Size = new System.Drawing.Size(582, 95);
+            this.business.TabIndex = 46;
             // 
-            // Result
+            // Result_Jiko
             // 
-            this.Result.Location = new System.Drawing.Point(625, 295);
-            this.Result.Multiline = true;
-            this.Result.Name = "Result";
-            this.Result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Result.Size = new System.Drawing.Size(582, 194);
-            this.Result.TabIndex = 44;
-            this.Result.TextChanged += new System.EventHandler(this.selectItemChange);
+            this.Result_Jiko.Location = new System.Drawing.Point(626, 418);
+            this.Result_Jiko.Multiline = true;
+            this.Result_Jiko.Name = "Result_Jiko";
+            this.Result_Jiko.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Result_Jiko.Size = new System.Drawing.Size(582, 100);
+            this.Result_Jiko.TabIndex = 45;
+            this.Result_Jiko.TextChanged += new System.EventHandler(this.selectItemChange);
             // 
             // MondaiKaizen_Jiko
             // 
-            this.MondaiKaizen_Jiko.Location = new System.Drawing.Point(625, 162);
+            this.MondaiKaizen_Jiko.Location = new System.Drawing.Point(628, 160);
             this.MondaiKaizen_Jiko.Multiline = true;
             this.MondaiKaizen_Jiko.Name = "MondaiKaizen_Jiko";
             this.MondaiKaizen_Jiko.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MondaiKaizen_Jiko.Size = new System.Drawing.Size(582, 110);
+            this.MondaiKaizen_Jiko.Size = new System.Drawing.Size(582, 100);
             this.MondaiKaizen_Jiko.TabIndex = 43;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(625, 495);
+            this.label17.Location = new System.Drawing.Point(625, 523);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 12);
-            this.label17.TabIndex = 130;
+            this.label17.TabIndex = 145;
             this.label17.Text = "■今週の言いたいこと";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(625, 279);
+            this.label16.Location = new System.Drawing.Point(625, 268);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(190, 12);
-            this.label16.TabIndex = 129;
-            this.label16.Text = "■前週掲げた改善案の実施結果報告";
+            this.label16.Size = new System.Drawing.Size(176, 12);
+            this.label16.TabIndex = 132;
+            this.label16.Text = "■問題点･改善案の実施結果報告";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(625, 3);
+            this.label15.Location = new System.Drawing.Point(625, 9);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(95, 12);
-            this.label15.TabIndex = 128;
+            this.label15.TabIndex = 129;
             this.label15.Text = "■問題点・改善案";
             // 
             // MondaiKaizen_Gyomu
             // 
-            this.MondaiKaizen_Gyomu.Location = new System.Drawing.Point(625, 34);
+            this.MondaiKaizen_Gyomu.Location = new System.Drawing.Point(625, 40);
             this.MondaiKaizen_Gyomu.Multiline = true;
             this.MondaiKaizen_Gyomu.Name = "MondaiKaizen_Gyomu";
             this.MondaiKaizen_Gyomu.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MondaiKaizen_Gyomu.Size = new System.Drawing.Size(582, 110);
+            this.MondaiKaizen_Gyomu.Size = new System.Drawing.Size(582, 100);
             this.MondaiKaizen_Gyomu.TabIndex = 42;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(626, 19);
+            this.label27.Location = new System.Drawing.Point(626, 26);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(65, 12);
-            this.label27.TabIndex = 137;
-            this.label27.Text = "＜業務内＞";
+            this.label27.Size = new System.Drawing.Size(53, 12);
+            this.label27.TabIndex = 130;
+            this.label27.Text = "＜業務＞";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(626, 147);
+            this.label28.Location = new System.Drawing.Point(626, 146);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(53, 12);
-            this.label28.TabIndex = 138;
+            this.label28.TabIndex = 131;
             this.label28.Text = "＜自己＞";
             // 
             // RunningTimeSun
@@ -1001,12 +1004,42 @@
             this.RunningTimeSat.Size = new System.Drawing.Size(0, 12);
             this.RunningTimeSat.TabIndex = 145;
             // 
+            // Result_Gyomu
+            // 
+            this.Result_Gyomu.Location = new System.Drawing.Point(627, 299);
+            this.Result_Gyomu.Multiline = true;
+            this.Result_Gyomu.Name = "Result_Gyomu";
+            this.Result_Gyomu.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Result_Gyomu.Size = new System.Drawing.Size(582, 100);
+            this.Result_Gyomu.TabIndex = 44;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(626, 285);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 12);
+            this.label29.TabIndex = 133;
+            this.label29.Text = "＜業務＞";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(625, 404);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(53, 12);
+            this.label30.TabIndex = 144;
+            this.label30.Text = "＜自己＞";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1241, 827);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.Result_Gyomu);
             this.Controls.Add(this.RunningTimeSat);
             this.Controls.Add(this.RunningTimeFri);
             this.Controls.Add(this.RunningTimeThurs);
@@ -1023,7 +1056,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.business);
-            this.Controls.Add(this.Result);
+            this.Controls.Add(this.Result_Jiko);
             this.Controls.Add(this.MondaiKaizen_Jiko);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -1198,7 +1231,7 @@
         internal System.Windows.Forms.Label label19;
         internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.TextBox business;
-        internal System.Windows.Forms.TextBox Result;
+        internal System.Windows.Forms.TextBox Result_Jiko;
         internal System.Windows.Forms.TextBox MondaiKaizen_Jiko;
         internal System.Windows.Forms.Label label17;
         internal System.Windows.Forms.Label label16;
@@ -1213,6 +1246,9 @@
         internal System.Windows.Forms.Label RunningTimeThurs;
         internal System.Windows.Forms.Label RunningTimeFri;
         internal System.Windows.Forms.Label RunningTimeSat;
+        internal System.Windows.Forms.TextBox Result_Gyomu;
+        internal System.Windows.Forms.Label label29;
+        internal System.Windows.Forms.Label label30;
     }
 }
 

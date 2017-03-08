@@ -145,6 +145,18 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("saturday_kadou")]
         public String saturday_kadou { get; set; }
 
+        [System.Xml.Serialization.XmlElement("mondaikaizen_gyomu")]
+        public String mondaikaizen_gyomu { get; set; }
+
+        [System.Xml.Serialization.XmlElement("mondaikaizen_jiko")]
+        public String mondaikaizen_jiko { get; set; }
+
+        [System.Xml.Serialization.XmlElement("result_gyomu")]
+        public String result_gyomu { get; set; }
+
+        [System.Xml.Serialization.XmlElement("result_jiko")]
+        public String result_jiko { get; set; }
+
         [System.Xml.Serialization.XmlElement("saying_gyoumunai")]
         public String saying_gyoumunai { get; set; }
 

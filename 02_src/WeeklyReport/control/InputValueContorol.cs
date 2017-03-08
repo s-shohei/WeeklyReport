@@ -87,12 +87,11 @@ namespace WeeklyReport.control
             model.mondaiKaizen_jiko = form1.MondaiKaizen_Jiko.Text;
 
             //formから渡ってきたの改善案の実施結果をモデルにセット！
-            model.result = form1.Result.Text;
+            model.result_gyomu = form1.Result_Gyomu.Text;
+            model.result_jiko = form1.Result_Jiko.Text;
 
-            //formから渡ってきた話たいこと（業務）をモデルにセット！
+            //formから渡ってきた話たいことをモデルにセット！
             model.business = form1.business.Text;
-
-            //formから渡ってきた話たいこと（業務外）をモデルにセット！
             model.play = form1.Play.Text;
 
             return model;

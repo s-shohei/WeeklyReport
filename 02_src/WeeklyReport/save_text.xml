@@ -43,6 +43,10 @@
   <saturday_end_hh></saturday_end_hh>
   <saturday_end_mm></saturday_end_mm>
   <saturday_kadou></saturday_kadou>
+  <mondai_gyomunai></mondai_gyomunai>
+  <mondai_jiko></mondai_jiko>
+  <result_gyoumu></result_gyoumu>
+  <result_jiko></result_jiko>
   <saying_gyoumugai></saying_gyoumugai>
   <saying_gyoumunai></saying_gyoumunai>
  </save_text>

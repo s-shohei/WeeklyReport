@@ -41,7 +41,9 @@ namespace WeeklyReport.common
             model = setting_load();
             model.lastweek_mondai_gyomu = f.MondaiKaizen_Gyomu.Text;
             model.lastweek_mondai_jiko  = f.MondaiKaizen_Jiko.Text;
-            model.lastweek_result       = f.Result.Text;
+            model.lastweek_result_gyomu = f.Result_Gyomu.Text;
+            model.lastweek_result_jiko  = f.Result_Jiko.Text;
+
 
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(WeeklyReport.model.SettingTextModel));
 
@@ -139,6 +141,14 @@ namespace WeeklyReport.common
             model.saturday_end_hh   = f.EndHH7.Text;
             model.saturday_end_mm   = f.EndMM7.Text;
             model.saturday_kadou    = f.Kadou7.Text;
+
+            // 今週の問題改善を保持
+            model.mondaikaizen_gyomu = f.MondaiKaizen_Gyomu.Text;
+            model.mondaikaizen_jiko = f.MondaiKaizen_Jiko.Text;
+
+            // 今週の問題改善結果を保持
+            model.result_gyomu = f.Result_Gyomu.Text;
+            model.result_jiko = f.Result_Jiko.Text;
 
             // 今週の言いたいことを保持
             model.saying_gyoumugai = f.Play.Text;

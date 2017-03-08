@@ -28,14 +28,20 @@ namespace WeeklyReport.model
         [System.Xml.Serialization.XmlElement("lastweek_mondai_jiko")]
         public String lastweek_mondai_jiko { get; set; }
 
-        [System.Xml.Serialization.XmlElement("lastweek_result")]
-        public String lastweek_result { get; set; }
+        [System.Xml.Serialization.XmlElement("lastweek_result_gyomu")]
+        public String lastweek_result_gyomu { get; set; }
+
+        [System.Xml.Serialization.XmlElement("lastweek_result_jiko")]
+        public String lastweek_result_jiko { get; set; }
 
         [System.Xml.Serialization.XmlElement("kadoutei")]
         public String kadou_tei_value { get; set; }
 
         [System.Xml.Serialization.XmlElement("kadouchu")]
         public String kadou_chu_value { get; set; }
+
+        [System.Xml.Serialization.XmlElement("kadoukou")]
+        public String kadou_kou_value { get; set; }
 
     }
 }

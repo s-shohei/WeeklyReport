@@ -76,9 +76,14 @@ namespace WeeklyReport.control
             return kaigyoReplace(st_model.lastweek_mondai_jiko);
         }
 
-        public String kaigyo_lastweek_result()
+        public String kaigyo_lastweek_result_gyomu()
         {
-            return kaigyoReplace(st_model.lastweek_result);
+            return kaigyoReplace(st_model.lastweek_result_jiko);
+        }
+
+        public String kaigyo_lastweek_result_jiko()
+        {
+            return kaigyoReplace(st_model.lastweek_result_gyomu);
         }
 
         //改行メソッド
